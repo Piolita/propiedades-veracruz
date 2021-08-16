@@ -14,38 +14,35 @@
     ></script>
 
     <!-- Favicon -->
-    <link rel="icon" href="logo.ico" />
+    <link rel="icon" href="img/banners/logo_01.jpg" />
+
+    <!-- Bootstrap 5 jsdeliver-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <!-- Bootstrap 5 cloudflare -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/css/bootstrap.min.css"> -->
 
     <!-- Font awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
 
-    <!-- Bootstrap 5 -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
 
+
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
+<div class="container-navbar">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand fs-4" href="index.html">
           <img
             src="img/banners/logo_01.jpg"
             alt="logo"
-            width="30"
-            height="30"
+            width="40"
+            height="40"
             class="d-inline-block align-top"/>
-            Propiedades-Veracruz</a>
+            <span class="text">Propiedades-Veracruz</span> </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -53,53 +50,103 @@
           data-bs-target="#navbarNavAltMarkup"
           aria-controls="navbarNavAltMarkup"
           aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+          aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <!-- <button type="button" class="btn-close" aria-label="Close"></button> -->
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link" href="boca.html">Boca del Rio</a>
-            <a class="nav-link" href="veracruz.html">Veracruz</a>
-            <a class="nav-link" href="riviera.html">Riviera Veracruzana</a>
-            <a class="nav-link" href="medellin.html">Medellin de Bravo</a>
-            <a class="nav-link" href="foraneos.html">Foraneos</a>
-            <a class="nav-link" href="tips.html">Tips</a>
-              <!-- Whatsapp -->
-              <!-- <a class="nav-link" href="https://wa.me/522293019294">
-                <i class="fab fa-whatsapp fa-2x"></i>
-              </a> -->
-            </li>
+            <a class="nav-link text-white" href="boca.html">Boca del Rio</a>
+            <a class="nav-link text-white" href="veracruz.html">Veracruz</a>
+            <a class="nav-link text-white" href="riviera.html">Riviera Veracruzana</a>
+            <a class="nav-link text-white" href="medellin.html">Medellin de Bravo</a>
+            <a class="nav-link text-white" href="foraneos.html">Foraneos</a>
+            <a class="nav-link text-white" href="tips.html">Tips Inmobiliarios</a>
           </div>
         </div>
       </div>
     </nav>
-
+</div>
  
-    <!-- Banner area 01-->
-    <div class="banner-area">
-      <div class="banner-text">
-        <h1>Propiedades-Veracruz</h1>
-        <h2>Venta de Inmuebles</h2>
-      </div>
-    </div>
+    <!-- Banner inicio-->
+<div class="banner-text position-absolute bottom-0 start-50 translate-middle-x">
+  <h1>Venta de Inmuebles</h1>
+</div>
+ 
+    <!-- Section New -->
+<section>
+  <h3>Propiedades en venta en Veracruz</h3>
+  <ul class="nav p-5">
+    <li>
+      <p>Se aceptan créditos</p>
+      <p>Precios negociables</p>
+      <p>Municipios de Boca del Río, Riviera Veracruzana, Veracruz, Medellín de Bravo, Foráneos</p>
+      <p>Giros habitacional, comercial, industrial, agrario-ganadero</p>
+    </li>
+  </ul>
+</section>
 
-    <!-- visitor counter -->
+    <!-- Footer -->
+<div class="container-footer">
+  <ul class="nav justify-content-center p-4">
+    <li class="nav-item">
+      <a class="nav-link" href="https://wa.me/522293019294">
+        <i class="fab fa-whatsapp  fa-2x"></i>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="https://www.facebook.com/propiedades.veracruz">
+        <i class="fab fa-facebook-f fa-2x"></i>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="https://www.youtube.com/channel/UCAzrz0L6Rk2l8i11iLt0ENA">
+        <i class="fab fa-youtube  fa-2x"></i>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="https://twitter.com/Magna_67">
+        <i class="fab fa-twitter  fa-2x"></i>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="https://www.instagram.com/propiedadesveracruz/?hl=es-la">
+        <i class="fab fa-instagram  fa-2x"></i>
+      </a>
+    </li>
+</ul>
+  
+  <div style="background: #004872; padding: 10px;">
+        <p style="color: #91BEC2; padding: 20px 0;" align="center">
+        &copy; 2021 Copyright: Created By: cmagna@propiedades-veracruz.com | tel: 2293019294
+        </p>
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+
+
+     <!-- visitor counter -->
     <script
       type="text/javascript"
       src="https://freehitcounters.org/count/8y68"
     ></script>
-    <br />
-    <a href="https://www.symptoma.es/es/info/covid-19">Nuevo Coronavirus</a>
-    <script
-      type="text/javascript"
-      src="https://whomania.com/ctr?id=78e7b45b4d7d92db98111a2b827d6b769d0c39b2"
-    ></script>
+    
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Bootstrap jsdeliver -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script> -->
+  
+      <!-- JS cloudflare -->
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.min.js"></script> -->
+    
   </body>
 </html>

@@ -5,22 +5,31 @@
 }
 
 /* navbar */
-
-/* .nav-item .nav-link i{
-    color: rgb(4, 148, 4);
-} */
+nav{
+    opacity: 75%;
+}
 
 .banner-text{
     color: rgb(248, 247, 244); 
     position: absolute;
-    z-index: 3;
-    top: 30%;
-    left: 35%;
+    top: 25%;
+    left: 25%;
     text-align: center;
+    justify-content: center;
 }
 
+h1{
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+h2{
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    color:rgba(0, 0, 0, 0.5);
+    margin-left: 23px;
+}
 /* Banner area  01*/
-.banner-area{   
+.container-navbar{   
     width: 100%;
     height: 350px;
     padding: auto;
@@ -30,36 +39,29 @@
     background-position: center, center;
 }
 
-.banner-area-boca{
+
+.container-navbar-boca{
     width: 100%;
     height: 350px;
     padding: auto;
     margin-bottom: 50px;
-    background-image: url(img/banners/02.1_boca.jpg);
+    background-image: url(img/banners/02_boca.jpg);
     background-size: cover;
     background-position: center, center;
 }
 
-.banner-area-veracruz{
+.container-navbar-foraneos{
     width: 100%;
     height: 350px;
     padding: auto;
     margin-bottom: 50px;
-    background-image: url(img/banners/06_veracruz.jpeg);
+    background-image: url(img/banners/09_foraneos.jpg);
     background-size: cover;
     background-position: center, center;
 }
 
-.banner-area-riviera{
-    width: 100%;
-    height: 350px;
-    padding: auto;
-    margin-bottom: 50px;
-    background-image: url(img/banners/05_riviera.jpg);
-    background-size: cover;
-    background-position: center, center;
-}
-.banner-area-medellin{
+
+.container-navbar-medellin{
     width: 100%;
     height: 350px;
     padding: auto;
@@ -69,17 +71,18 @@
     background-position: center, center;
 }
 
-.banner-area-foraneos{
+.container-navbar-riviera{
     width: 100%;
     height: 350px;
     padding: auto;
     margin-bottom: 50px;
-    background-image: url(img/banners/09_foraneos.jpeg);
+    background-image: url(img/banners/05_riviera.jpg);
     background-size: cover;
     background-position: center, center;
 }
 
-.banner-area-tips{
+
+.container-navbar-tips{
     width: 100%;
     height: 350px;
     padding: auto;
@@ -89,7 +92,15 @@
     background-position: center, center;
 }
 
-
+.container-navbar-veracruz{
+    width: 100%;
+    height: 350px;
+    padding: auto;
+    margin-bottom: 50px;
+    background-image: url(img/banners/03_veracruz.jpg);
+    background-size: cover;
+    background-position: center, center;
+}
 
 
 /* Cards area */
@@ -131,28 +142,33 @@
 }
 
 
+/* Footer */
+.container-footer{
+    background: rgb(0, 91, 143);
+
+}
+.container-footer a{ 
+    color: #fff;
+    text-decoration: none;
+}
+.container-footer a i{
+    color: #91BEC2;
+}
+
 /* Responsive */
 
 @media (max-width: 768px){
-
-     .banner-text{
-        top: 30%;
-        left: 10%;
-        position: absolute;
-        z-index: 1;
-
+    .banner-text{
+        top: 20%;
+        left: 7%;
     }
-
     .menu-cards{
         grid-template-columns: repeat(2, 1fr);
     }
-
+    
 }
-
 @media (max-width: 500px){
     .menu-cards{
         grid-template-columns: 1fr;
     }
-
-
 }
