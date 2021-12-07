@@ -102,6 +102,35 @@ h2{
     background-position: center, center;
 }
 
+.container-navbar-comprar{
+    width: 100%;
+    height: 350px;
+    padding: auto;
+    margin-bottom: 50px;
+    background-image: url(img/infonavit/comprar.jpg);
+    background-size: cover;
+    background-position: center, center;
+}
+
+.container-navbar-construir{
+    width: 100%;
+    height: 350px;
+    padding: auto;
+    margin-bottom: 50px;
+    background-image: url(img/infonavit/construir.jpg);
+    background-size: cover;
+    background-position: center, center;
+}
+
+.container-navbar-remodelar{
+    width: 100%;
+    height: 350px;
+    padding: auto;
+    margin-bottom: 50px;
+    background-image: url(img/infonavit/remodelar.jpg);
+    background-size: cover;
+    background-position: center, center;
+}
 
 /* Cards area */
 
