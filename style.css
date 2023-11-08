@@ -158,6 +158,9 @@ section{
     background: rgb(0, 91, 143);
 
 }
+.container-footer h2{
+    color: #91BEC2;
+}
 .container-footer a{ 
     color: #fff;
     text-decoration: none;
