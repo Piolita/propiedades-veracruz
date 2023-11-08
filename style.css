@@ -50,12 +50,12 @@ h2{
     background-position: center, center;
 }
 
-.container-navbar-foraneos{
+.container-navbar-xalapa{
     width: 100%;
     height: 350px;
     padding: auto;
     margin-bottom: 50px;
-    background-image: url(img/banners/09_foraneos.jpg);
+    background-image: url(img/banners/xalapa.jpg);
     background-size: cover;
     background-position: center, center;
 }
@@ -102,7 +102,15 @@ h2{
     background-position: center, center;
 }
 
-
+section{
+    width: 100%;
+    height: 350px;
+    padding: auto;
+    margin-bottom: 50px;
+    background-image: url(img/banners/contactanos.jpeg);
+    background-size: cover;
+    background-position: center, center;
+}
 
 
 
@@ -149,6 +157,9 @@ h2{
 .container-footer{
     background: rgb(0, 91, 143);
 
+}
+.container-footer h2{
+    color: #91BEC2;
 }
 .container-footer a{ 
     color: #fff;
