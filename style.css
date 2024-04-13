@@ -55,11 +55,20 @@ h2{
     height: 350px;
     padding: auto;
     margin-bottom: 50px;
-    background-image: url(img/banners/xalapa.jpg);
+    background-image: url(img/banners/xalapa.png);
     background-size: cover;
     background-position: center, center;
 }
 
+.container-navbar-pozarica{
+    width: 100%;
+    height: 350px;
+    padding: auto;
+    margin-bottom: 50px;
+    background-image: url(img/banners/poza_rica.png);
+    background-size: cover;
+    background-position: center, center;
+}
 
 .container-navbar-medellin{
     width: 100%;
