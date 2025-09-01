@@ -28,16 +28,7 @@ h2{
     color:rgba(0, 0, 0, 0.5);
     margin-left: 23px;
 }
-/* Banner area  01*/
-.container-navbar{   
-    width: 100%;
-    height: 350px;
-    padding: auto;
-    margin-bottom: 50px;
-    background-image: url(img/banners/01_inicio.jpg);
-    background-size: cover;
-    background-position: center, center;
-}
+
 
 
 .container-navbar-boca{
@@ -194,4 +185,47 @@ section{
     .menu-cards{
         grid-template-columns: 1fr;
     }
+}
+
+
+/* Estilos para el contenedor del video de fondo */
+.video-container {
+    position: relative; /* O `absolute` si es un banner fijo bajo el nav */
+    width: 100%;
+    height: 350px; /* Asegúrate de que esta altura coincida con la de .container-navbar si el video va dentro */
+    overflow: hidden; /* Oculta cualquier parte del video que se desborde */
+    margin-bottom: 50px; /* Mantener el margen para el resto del contenido */
+}
+
+/* Estilos para el video en sí */
+.video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%; /* Asegura que cubra al menos el 100% del ancho */
+    min-height: 100%; /* Asegura que cubra al menos el 100% del alto */
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%); /* Centra el video */
+    z-index: -100; /* Lo envía al fondo, detrás de otros elementos */
+    background-size: cover; /* Simula el efecto de cover para el video */
+    /* Asegurarse de que el video siempre cubra el contenedor sin dejar espacios */
+}
+
+/* Opcional: Ajusta el texto del banner si está sobre el video */
+.banner-text {
+    position: absolute; /* Asegúrate de que siga siendo absoluto para posicionarse sobre el video */
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Para centrarlo perfectamente */
+    z-index: 10; /* Asegura que el texto esté por encima del video */
+    width: 100%; /* Ocupa todo el ancho */
+    text-align: center; /* Centra el texto */
+    color: rgb(248, 247, 244);
+}
+h1{
+    font-size: 2em; /* Puedes ajustar el tamaño, 3em es un ejemplo */
+    font-family: 'Times New Roman', Times, serif;
+    color: white; /* Asegúrate de que el color sea visible sobre el video */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Para que resalte más */
 }
