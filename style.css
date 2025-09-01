@@ -1,123 +1,104 @@
-*{
+/* Generales */
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* navbar */
-nav{
+/* Navbar */
+nav {
     opacity: 75%;
 }
 
-.banner-text{
-    color: rgb(248, 247, 244); 
-    position: absolute;
-    top: 25%;
-    left: 25%;
-    text-align: center;
-    justify-content: center;
+/* Títulos */
+h1, h2, h5 {
+    font-family: 'Times New Roman', Times, serif;
 }
 
-h1{
-    font-size: 30px;
-    font-family: 'Times New Roman', Times, serif;
+h1 {
+    font-size: 2em;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
-h2{
+
+h2 {
     font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
-    color:rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.5);
     margin-left: 23px;
 }
 
+/* Video Banner */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
 
+.video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: -100;
+}
 
-.container-navbar-boca{
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+    color: rgb(248, 247, 244);
+}
+
+/* Secciones de banners (contac, tips, etc.) */
+.banner-section {
     width: 100%;
     height: 350px;
     padding: auto;
     margin-bottom: 50px;
+    background-size: cover;
+    background-position: center, center;
+}
+
+.container-navbar-boca {
     background-image: url(img/banners/03_boca_01.jpg);
-    background-size: cover;
-    background-position: center, center;
 }
 
-.container-navbar-xalapa{
-    width: 100%;
-    height: 350px;
-    padding: auto;
-    margin-bottom: 50px;
+.container-navbar-xalapa {
     background-image: url(img/banners/xalapa.png);
-    background-size: cover;
-    background-position: center, center;
 }
 
-.container-navbar-pozarica{
-    width: 100%;
-    height: 350px;
-    padding: auto;
-    margin-bottom: 50px;
+.container-navbar-pozarica {
     background-image: url(img/banners/poza_rica.png);
-    background-size: cover;
-    background-position: center, center;
 }
 
-.container-navbar-medellin{
-    width: 100%;
-    height: 350px;
-    padding: auto;
-    margin-bottom: 50px;
+.container-navbar-medellin {
     background-image: url(img/banners/04_medellin.jpg);
-    background-size: cover;
-    background-position: center, center;
 }
 
-.container-navbar-riviera{
-    width: 100%;
-    height: 350px;
-    padding: auto;
-    margin-bottom: 50px;
+.container-navbar-riviera {
     background-image: url(img/banners/05_riviera.jpg);
-    background-size: cover;
-    background-position: center, center;
 }
 
-
-.container-navbar-tips{
-    width: 100%;
-    height: 350px;
-    padding: auto;
-    margin-bottom: 50px;
+.container-navbar-tips {
     background-image: url(img/banners/10_tips.jpeg);
-    background-size: cover;
-    background-position: center, center;
 }
 
-.container-navbar-veracruz{
-    width: 100%;
-    height: 350px;
-    padding: auto;
-    margin-bottom: 50px;
+.container-navbar-veracruz {
     background-image: url(img/banners/03_veracruz.jpg);
-    background-size: cover;
-    background-position: center, center;
 }
 
-section{
-    width: 100%;
-    height: 350px;
-    padding: auto;
-    margin-bottom: 50px;
-    background-image: url(img/banners/contactanos.jpeg);
-    background-size: cover;
-    background-position: center, center;
-}
-
-
-
-/* Cards area */
-
-
-.menu-cards{
+/* Cards Area */
+.menu-cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 30px;
@@ -125,12 +106,12 @@ section{
     margin: 15px;
 }
 
-.menu-cards .card{
+.menu-cards .card {
     border-radius: 20px;
     box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
 }
 
-.menu-cards .card a{
+.menu-cards .card a {
     color: rgb(104, 64, 2);
     text-decoration: none;
     cursor: pointer;
@@ -139,93 +120,48 @@ section{
     margin-left: 30px;
 }
 
-.menu-cards .card a:hover{
+.menu-cards .card a:hover {
     font-size: 25px;
     transition: .7s;
 }
-.menu-cards .card i{
+
+.menu-cards .card i {
     margin-right: 30px;
     color: black;
 }
 
-.card-body{
+.card-body {
     background-color: rgb(248, 251, 252);
 }
 
-
-/* Footer */
-.container-footer{
-    background: rgb(0, 91, 143);
-
-}
-.container-footer h2{
-    color: #91BEC2;
-}
-.container-footer a{ 
-    color: #fff;
-    text-decoration: none;
-}
-.container-footer a i{
-    color: #91BEC2;
-}
-
-/* Responsive */
-
-@media (max-width: 768px){
-    .banner-text{
-        top: 20%;
-        left: 7%;
-    }
-    .menu-cards{
+/* Media Queries para Responsive */
+@media (max-width: 768px) {
+    .menu-cards {
         grid-template-columns: repeat(2, 1fr);
     }
-    
-}
-@media (max-width: 500px){
-    .menu-cards{
-        grid-template-columns: 1fr;
+
+    .footer-links .row > div {
+        text-align: center;
+        margin-bottom: 2rem !important;
+    }
+
+    .footer-links .row > div:last-child {
+        margin-bottom: 0 !important;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
     }
 }
 
-
-/* Estilos para el contenedor del video de fondo */
-.video-container {
-    position: relative; /* O `absolute` si es un banner fijo bajo el nav */
-    width: 100%;
-    height: 350px; /* Asegúrate de que esta altura coincida con la de .container-navbar si el video va dentro */
-    overflow: hidden; /* Oculta cualquier parte del video que se desborde */
-    margin-bottom: 50px; /* Mantener el margen para el resto del contenido */
-}
-
-/* Estilos para el video en sí */
-.video-container video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%; /* Asegura que cubra al menos el 100% del ancho */
-    min-height: 100%; /* Asegura que cubra al menos el 100% del alto */
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%); /* Centra el video */
-    z-index: -100; /* Lo envía al fondo, detrás de otros elementos */
-    background-size: cover; /* Simula el efecto de cover para el video */
-    /* Asegurarse de que el video siempre cubra el contenedor sin dejar espacios */
-}
-
-/* Opcional: Ajusta el texto del banner si está sobre el video */
-.banner-text {
-    position: absolute; /* Asegúrate de que siga siendo absoluto para posicionarse sobre el video */
-    top: 50%; /* Centra verticalmente */
-    left: 50%; /* Centra horizontalmente */
-    transform: translate(-50%, -50%); /* Para centrarlo perfectamente */
-    z-index: 10; /* Asegura que el texto esté por encima del video */
-    width: 100%; /* Ocupa todo el ancho */
-    text-align: center; /* Centra el texto */
-    color: rgb(248, 247, 244);
-}
-h1{
-    font-size: 2em; /* Puedes ajustar el tamaño, 3em es un ejemplo */
-    font-family: 'Times New Roman', Times, serif;
-    color: white; /* Asegúrate de que el color sea visible sobre el video */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Para que resalte más */
+@media (max-width: 500px) {
+    .menu-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .banner-text h1 {
+        font-size: 2em;
+    }
 }
