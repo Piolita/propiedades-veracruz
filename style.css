@@ -1,12 +1,12 @@
 /* Generales */
-* {
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 /* Navbar */
-nav {
+nav{
     opacity: 75%;
 }
 
@@ -15,15 +15,14 @@ h1, h2, h5 {
     font-family: 'Times New Roman', Times, serif;
 }
 
-h1 {
+h1{
     font-size: 2em;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
-
-h2 {
+h2{
     font-size: 20px;
-    color: rgba(0, 0, 0, 0.5);
+    color:rgba(0, 0, 0, 0.5);
     margin-left: 23px;
 }
 
@@ -59,8 +58,8 @@ h2 {
     color: rgb(248, 247, 244);
 }
 
-/* Secciones de banners (contac, tips, etc.) */
-.banner-section {
+/* Nuevas reglas para los banners de las páginas secundarias */
+.page-banner {
     width: 100%;
     height: 350px;
     padding: auto;
@@ -69,36 +68,29 @@ h2 {
     background-position: center, center;
 }
 
-.container-navbar-boca {
-    background-image: url(img/banners/03_boca_01.jpg);
-}
-
-.container-navbar-xalapa {
-    background-image: url(img/banners/xalapa.png);
-}
-
-.container-navbar-pozarica {
-    background-image: url(img/banners/poza_rica.png);
-}
-
-.container-navbar-medellin {
+/* Reglas específicas para cada página */
+.medellin-banner {
     background-image: url(img/banners/04_medellin.jpg);
 }
 
-.container-navbar-riviera {
-    background-image: url(img/banners/05_riviera.jpg);
+.boca-banner {
+    background-image: url(img/banners/03_boca_01.jpg);
 }
 
-.container-navbar-tips {
-    background-image: url(img/banners/10_tips.jpeg);
-}
-
-.container-navbar-veracruz {
+.veracruz-banner {
     background-image: url(img/banners/03_veracruz.jpg);
 }
 
+.riviera-banner {
+    background-image: url(img/banners/05_riviera.jpg);
+}
+
+.tips-banner {
+    background-image: url(img/banners/10_tips.jpeg);
+}
+
 /* Cards Area */
-.menu-cards {
+.menu-cards{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 30px;
@@ -106,12 +98,12 @@ h2 {
     margin: 15px;
 }
 
-.menu-cards .card {
+.menu-cards .card{
     border-radius: 20px;
     box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
 }
 
-.menu-cards .card a {
+.menu-cards .card a{
     color: rgb(104, 64, 2);
     text-decoration: none;
     cursor: pointer;
@@ -120,35 +112,39 @@ h2 {
     margin-left: 30px;
 }
 
-.menu-cards .card a:hover {
+.menu-cards .card a:hover{
     font-size: 25px;
     transition: .7s;
 }
-
-.menu-cards .card i {
+.menu-cards .card i{
     margin-right: 30px;
     color: black;
 }
 
-.card-body {
+.card-body{
     background-color: rgb(248, 251, 252);
 }
 
-/* Media Queries para Responsive */
-@media (max-width: 768px) {
-    .menu-cards {
+/* Responsive */
+@media (max-width: 768px){
+    .banner-text{
+        top: 20%;
+        left: 7%;
+    }
+    .menu-cards{
         grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 0 5px;
+        margin: 0 auto;
     }
 
     .footer-links .row > div {
         text-align: center;
         margin-bottom: 2rem !important;
     }
-
     .footer-links .row > div:last-child {
         margin-bottom: 0 !important;
     }
-
     .social-icons {
         display: flex;
         justify-content: center;
@@ -156,12 +152,11 @@ h2 {
     }
 }
 
-@media (max-width: 500px) {
-    .menu-cards {
+@media (max-width: 500px){
+    .menu-cards{
         grid-template-columns: 1fr;
     }
-    
     .banner-text h1 {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 }
