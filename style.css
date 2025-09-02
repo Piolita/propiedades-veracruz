@@ -132,8 +132,9 @@ h2{
         left: 7%;
     }
     .menu-cards{
+        max-width: 400px;
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        gap: 30px;
         padding: 0 5px;
         margin: 0 auto;
     }
@@ -155,8 +156,16 @@ h2{
 @media (max-width: 500px){
     .menu-cards{
         grid-template-columns: 1fr;
+        max-width: 300px; 
     }
     .banner-text h1 {
         font-size: 1.5em;
+    }
+    .type-item{
+        text-align: center; 
+        margin: 30px; 
+    }
+    .banner-text h2{
+        color: rgb(248, 247, 244);
     }
 }
