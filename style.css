@@ -70,11 +70,11 @@ h2{
 
 /* Reglas específicas para cada página */
 .medellin-banner {
-    background-image: url(img/banners/04_medellin.jpg);
+    background-image: url(img/banners/04_medellin.jpeg);
 }
 
 .boca-banner {
-    background-image: url(img/banners/03_boca_01.jpg);
+    background-image: url(img/banners/02_boca.jpg);
 }
 
 .veracruz-banner {
@@ -82,11 +82,15 @@ h2{
 }
 
 .riviera-banner {
-    background-image: url(img/banners/05_riviera.jpg);
+    background-image: url(img/banners/05_riviera.jpeg);
 }
 
 .tips-banner {
-    background-image: url(img/banners/10_tips.jpeg);
+    background-image: url(img/banners/tips_geminie_01.jpeg);
+}
+
+.privacy_policy-banner {
+    background-image: url(img/banners/aviso_privacidad.jpeg);
 }
 
 /* Cards Area */
