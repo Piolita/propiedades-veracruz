@@ -78,7 +78,7 @@ h2{
 }
 
 .veracruz-banner {
-    background-image: url(img/banners/03_veracruz.jpg);
+    background-image: url(img/banners/03_veracruz.jpeg);
 }
 
 .riviera-banner {
@@ -172,5 +172,52 @@ h2{
     }
     .banner-text h2{
         color: rgb(248, 247, 244);
+    }
+}
+
+/* Oculta el carrusel de PC en pantallas pequeñas */
+@media (max-width: 768px) {
+    #propiedades-pc {
+        display: none;
+    }
+}
+
+/* Oculta el carrusel de móvil en pantallas grandes */
+@media (min-width: 768px) {
+    #propiedades-mobile {
+        display: none;
+    }
+}
+
+/* Estilos para el carrusel de scroll en móviles */
+@media (max-width: 768px) {
+    .mobile-scroll {
+        overflow-x: scroll;
+        padding-bottom: 1rem;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .mobile-scroll .col {
+        min-width: 80% !important;
+        margin-right: 15px;
+        scroll-snap-align: start;
+        flex-shrink: 0;
+    }
+
+    .mobile-scroll .card-img-top {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: cover;
+    }
+}
+
+/* Estilos de las flechas del carrusel de PC */
+@media (min-width: 769px) {
+    #pcCarousel .carousel-control-prev-icon,
+    #pcCarousel .carousel-control-next-icon {
+        background-color: #004872;
+        border-radius: 50%;
+        padding: 1rem;
     }
 }
