@@ -93,6 +93,10 @@ h2{
     background-image: url(img/banners/aviso_privacidad.jpeg);
 }
 
+.faq-banner {
+    background-image: url(img/banners/faq.jpeg);
+}
+
 /* Cards Area */
 .menu-cards{
     display: grid;
