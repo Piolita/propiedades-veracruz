@@ -1,60 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="es">
+<head>
 
-
-    <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-WKHK8PCC');</script>
-    <!-- End Google Tag Manager -->
-
-    <!-- Metaetiqueta verificación -->
     <meta name="facebook-domain-verification" content="n2rytl6hcq28xq51tkm5y2flqyrny0" />
+
 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Propiedades Veracruz</title>
+    <title>Riviera Veracruzana | Propiedades Veracruz</title>
 
 
-    <!-- Favicon -->
     <link rel="icon" href="img/banners/logo_01.jpg" />
 
-    <!-- Bootstrap 5 jsdeliver-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <!-- Font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      :root {
+          --color-primary: #004872; /* Azul Marino */
+          --color-secondary: #ff9900; /* Naranja/Dorado para acentos */
+          --color-dark: #212529;
+      }
+      
+      .navbar {
+          background-color: var(--color-dark) !important;
+      }
+      
+      /* Estilo del Header de Página */
+      .page-header {
+          background-color: var(--color-primary);
+          padding: 5rem 0;
+          margin-top: 56px; /* Ajuste para el navbar fijo */
+      }
+      .page-header h1 {
+          font-size: 3rem;
+          font-weight: 700;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
 
-  </head>
-  <body>
+      /* Estilo de las Tarjetas de Propiedades */
+      .card {
+          border: none;
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          border-radius: 0.75rem;
+          overflow: hidden;
+      }
+      .card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+      }
+      .card-img-top {
+          height: 200px;
+          object-fit: cover;
+      }
+      .card-body h5 {
+          color: var(--color-primary);
+          font-weight: bold;
+      }
+      .card-body h6 {
+          font-size: 0.95rem;
+          color: var(--color-dark);
+      }
+      .card-body .fa-bed, .fa-bath, .fa-car, .fa-arrows-alt {
+          color: var(--color-secondary);
+          margin-right: 5px;
+      }
+      .card .btn-primary {
+          background-color: var(--color-primary);
+          border-color: var(--color-primary);
+      }
+      .card .btn-outline-primary {
+          border-color: var(--color-primary);
+          color: var(--color-primary);
+      }
+      .card .btn-outline-primary:hover {
+          background-color: var(--color-primary);
+          color: white;
+      }
 
-    <!-- Google Tag Manager (noscript) -->
+      /* Estilo de Carrusel/Grid */
+      .listing-section {
+          padding-top: 3rem;
+          padding-bottom: 3rem;
+      }
+      .listing-section .type-item h2 {
+          color: var(--color-primary);
+          font-weight: bold;
+          margin-bottom: 2rem;
+          text-align: center;
+      }
+
+      /* Estilo del Pre-Footer y Footer */
+      .footer-links {
+          background-color: var(--color-dark) !important;
+          color: white;
+      }
+      .footer-links h5 {
+          color: var(--color-secondary); /* Color acento en títulos del footer */
+      }
+      .footer-links a:hover {
+          color: var(--color-secondary) !important;
+      }
+      
+    </style>
+</head>
+
+
+<body>
+
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKHK8PCC"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
-
-
-
-    <!-- Navbar -->
-      <div class="page-banner riviera-banner">
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-          <div class="container">
-            <a class="navbar-brand" href="index.html">
-              <img
-                src="img/banners/logo_01.jpg"
-                alt="logo"
-                width="30"
-                height="30"
-                class="d-inline-block align-top"/>
-                Propiedades-Veracruz</a>
+    <div class="container-navbar">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="img/banners/logo_01.jpg"
+              alt="logo"
+              width="30"
+              height="30"
+              class="d-inline-block align-top me-2"
+            />
+            Propiedades-Veracruz
+          </a>
             <button
               class="navbar-toggler"
               type="button"
@@ -66,201 +142,255 @@
             >
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav">
-                <a class="nav-link text-white" href="boca.html">Boca del Rio</a>
-                <a class="nav-link text-white" href="veracruz.html">Veracruz</a>
-                <a class="nav-link text-white" href="riviera.html">Riviera Veracruzana</a>
-                <a class="nav-link text-white" href="medellin.html">Medellin de Bravo</a>
-                <!-- <a class="nav-link text-white" href="Xalapa.html">Xalapa</a>
-                <a class="nav-link text-white" href="pozarica.html">Poza Rica</a> -->
-                <a class="nav-link text-white" href="tips.html">Tips Inmobiliarios</a>
-              </div>
+
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link text-white" href="boca.html">Boca del Río</a>
+              <a class="nav-link text-white" href="veracruz.html">Veracruz</a>
+              <a class="nav-link text-white active" aria-current="page" href="riviera.html">Riviera Veracruzana</a>
+              <a class="nav-link text-white" href="medellin.html">Medellín de Bravo</a>
+              <a class="nav-link text-white" href="tips.html">Tips Inmobiliarios</a>
             </div>
           </div>
-        </nav>
-      </div>
-    
-    <!-- Cards Riviera-->
-    <div class="banner-text position-absolute bottom-0 start-50 translate-middle-x">
-      <h2>Riviera Veracruzana</h2>
+        </div>
+      </nav>
     </div>
 
-    <!-- Casas-->
-    <div class="type-item">
-      <h2>C A S A S</h2>
-    </div>
-
-    <div class="menu-cards">
-
-
-
-
-      <div class="card" style="width: 20rem;">
-        <img src="img/riviera/casas/mesina_13.jpg" alt=" Lomas del Mediterraneo">
-        <div class="card-body">
-          <h5 class="card-title">Lomas del Mediterraneo</h5>
-          <h6>Riviera Veracruzana</h6>
-          <h6> 3 <i class="fas fa-bed"></i> 2.5 <i class="fas fa-bath"></i>  2 <i class="fas fa-car"></i> </h6>
-          <h6> <i class="fa fa-arrows-alt"> 160 m2 t / 119 m2 c </i>   </h6>
-          <h6> $2,750,000 </h6>
-          <h6> Cuota Mtto: $ 900 </h6>
-          <!-- <a href="x"
-          target="_black">Ver en YouTube</a> -->
-          <a href="https://www.youtube.com/shorts/eB9-vPq7OSI"
-          target="_black">Amenidades</a>
-        </div>
-      </div> 
-
-      <div class="card" style="width: 20rem;">
-        <img src="img/riviera/casas/paseoLomas.jpg" alt="Paseo de las Lomas">
-        <div class="card-body">
-          <h5> Playas del Conchal</h5>
-          <h6>Riviera Veracruzana</h6>
-          <h6> 3 <i class="fas fa-bed"></i> 4.5 <i class="fas fa-bath"></i> </i> 2 <i class="fas fa-car"></i></h6>
-          <h6> <i class="fa fa-arrows-alt"> 233 m2 t / 230 m2 c </i>   </h6>
-          <h6>$ 5,150,000</h6>
-          <h6> Cuota Mtto: $ 1,070 </h6>
-          <a href="https://www.youtube.com/watch?v=uQRUq5K0VUE"
-          target="_black">Ver en YouTube</a>
-        </div>
-      </div>
-
-
-
-
-
-    </div>
-
-    <!-- Departamentos -->
-    <div class="type-item">
-      <h2>D E P A R T A M E N T O S</h2>
-    </div>
-
-    <div class="menu-cards">
-
-
-
-      <div class="card" style="width: 20rem;">
-        <img src="img/riviera/deptos/latitud_703_5.jpg" alt="Torre Latitud">
-        <div class="card-body">
-          <h5>Torre Latitud</h5>
-          <h6>Riviera Veracruzana</h6>
-          <h6> 2 <i class="fas fa-bed"></i> 2 <i class="fas fa-bath"></i> </i> 2 <i class="fas fa-car"></i> </h6>
-          <h6> <i class="fa fa-arrows-alt"> 180 m2 </i> Nivel 7  </h6>
-          <h6>$ 3,700,000</h6>
-          <h6> Cuota Mtto: $ 5,200 </h6>
-          <a href="https://www.youtube.com/shorts/d0PEQLM6RK4"
-          target="_black">Ver en YouTube</a>
-        </div>
-      </div>
-  
-
-
-      <div class="card" style="width: 20rem;">
-        <img src="img/riviera/deptos/ame_PlayaMarina_0.jpg" alt="Torre Playa Marina">
-        <div class="card-body">
-          <h5>Torre Playa Marina</h5>
-          <h6>Riviera Veracruzana</h6>
-          <h6> 3 <i class="fas fa-bed"></i> 3 <i class="fas fa-bath"></i> </i> 3 <i class="fas fa-car"></i> </h6>
-          <h6> <i class="fa fa-arrows-alt"> 230 m2 </i>  Nivel 15 </h6>
-          <h6>$ 7,500,000</h6>
-          <h6> Cuota Mtto: $ 9,200 </h6>
-          <a href="https://www.youtube.com/watch?v=SmNK0ERG2pQ"
-          target="_black">Ver en YouTube</a>
-          <a href="https://www.youtube.com/shorts/PRXQbiyc8tE"
-          target="_black">Amenidades</a>
-        </div>
-      </div>
-
-
-
-      <div class="card" style="width: 20rem;">
-        <img src="img/riviera/deptos/VistaCumbre_3Rec_18.jpg" alt="Vista Cumbre">
-        <div class="card-body">
-          <h5 class="card-title">Vista Cumbre preventa</h5>
-          <h6>Riviera Veracruzana, Ver.</h6>
-          <h6> 1 <i class="fas fa-bed"></i> 1 <i class="fas fa-bath"></i> </i> 1 <i class="fas fa-car"></i></h6>
-          <h6> <i class="fa fa-arrows-alt"> 60 m2</i>   </h6>
-          <h6>Desde $ 2,090,000</h6>
-          <h6> Cuota Mtto: $ 2,200 </h6>
-          <a href="x"
-          target="_black">Ver en YouTube</a>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Locales/Oficinas -->
-    <div class="type-item">
-        <h2>L O C A L E S   /  O F I C I N A S</h2>
-    </div>   
-
-
-    <div class="menu-cards"> 
-
-
-
-
-    </div>  
-
-    <!-- Terrenos -->
-    <div class="type-item">
-      <h2>T E R R E N O S</h2>
-    </div>
-
-    <div class="menu-cards">
-
-
-
-
-      <div class="card" style="width: 20rem;">
-        <img src="img/riviera/terrenos/altamira_1.jpg" alt="Punta Tiburon">
-        <div class="card-body">
-          <h5>Punta Tiburón</h5>
-          <h6>Riviera Veracruzana</h6>
-          <h6>Superficie: 825 m2 </h6>
-          <h6>$ 5,000,000</h6>
-          <h6> Cuota Mtto: $ 5,015 </h6>
-          <a href="https://www.youtube.com/shorts/IEtDYzLotzA"
-          target="_black">Ver en YouTube</a>
-        </div>
-      </div>  
-            
-      <div class="card" style="width: 20rem;">
-        <img src="img/riviera/terrenos/piedra_reyes.jpg" alt="La Piedra">
-        <div class="card-body">
-          <h5>La Piedra</h5>
-          <h6>Alvarado, Veracruz</h6>
-          <h6>Superficie: 633 m2</h6>
-          <h6>$ 330,000</h6>
-          <a href="https://www.youtube.com/watch?v=7S2ilWqO9IQ"
-          target="_black">Ver en TouTube</a>
-        </div>
-      </div>
-        
-
-    </div>
-
-
-    <footer class="text-white text-center py-4 mt-5" style="background-color: #004872;">
+    <div class="page-header text-white text-center" style="background-color: var(--color-primary);">
         <div class="container">
-            <p class="mb-0">© 2025 Propiedades Veracruz. Copyright: Created By: cmagna | tel: 2293019294</p>
-            <div class="social-icons mt-2">
-                <a href="https://wa.me/522293019294" class="text-white mx-2" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
-                <a href="https://www.facebook.com/cMagnaDjesus" class="text-white mx-2" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.youtube.com/@propiedades-veracruz_2024" class="text-white mx-2" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
-                <a href="https://www.tiktok.com/@cmagnadj" class="text-white mx-2" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
-                <a href="https://www.instagram.com/propiedades_veracruz/" class="text-white mx-2" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <h1 class="display-4 fw-bold">Riviera Veracruzana</h1>
+            <p class="lead mb-0">Lujo y exclusividad frente al mar.</p>
+        </div>
+    </div>
+
+
+    <section class="listing-section py-5">
+        <div class="container">
+            <div class="type-item mb-5">
+                <h2 class="text-center display-6 fw-bold">C A S A S</h2>
+            </div>
+            
+            <div class="row row-cols-1 row-cols-md-3 g-4"> 
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/riviera/casas/mesina_13.jpg" class="card-img-top" alt="Lomas del Mediterraneo">
+                        <div class="card-body">
+                            <h5 class="card-title">Lomas del Mediterraneo</h5>
+                            <h6>Riviera Veracruzana</h6>
+                            <h6 class="text-muted small">
+                                3 <i class="fas fa-bed"></i> | 2.5 <i class="fas fa-bath"></i> | 2 <i class="fas fa-car"></i> 
+                            </h6>
+                            <h6 class="text-muted small">
+                                <i class="fa fa-arrows-alt me-1"></i> 160 m² T / 119 m² C 
+                            </h6>
+                            <p class="card-text small text-muted mb-2">Cuota Mtto: $ 900</p>
+                            <h5 class="fw-bold text-success mt-3">$2,750,000</h5>
+                            <a href="https://www.youtube.com/shorts/eB9-vPq7OSI" target="_blank" class="btn btn-primary w-100 mt-2">Amenidades</a>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/riviera/casas/paseoLomas.jpg" class="card-img-top" alt="Paseo de las Lomas">
+                        <div class="card-body">
+                            <h5 class="card-title">Playas del Conchal</h5>
+                            <h6>Riviera Veracruzana</h6>
+                            <h6 class="text-muted small">
+                                3 <i class="fas fa-bed"></i> | 4.5 <i class="fas fa-bath"></i> | 2 <i class="fas fa-car"></i> 
+                            </h6>
+                            <h6 class="text-muted small">
+                                <i class="fa fa-arrows-alt me-1"></i> 233 m² T / 230 m² C 
+                            </h6>
+                            <p class="card-text small text-muted mb-2">Cuota Mtto: $ 1,070</p>
+                            <h5 class="fw-bold text-success mt-3">$5,150,000</h5>
+                            <a href="https://www.youtube.com/watch?v=uQRUq5K0VUE" target="_blank" class="btn btn-primary w-100 mt-2">Ver Video <i class="fab fa-youtube ms-2"></i></a>
+                        </div>
+                    </div>
+                </div> 
+
             </div>
         </div>
+    </section>
+
+        
+    <section class="listing-section py-5 bg-light">
+        <div class="container">
+            <div class="type-item mb-5">
+                <h2 class="text-center display-6 fw-bold">D E P A R T A M E N T O S</h2>
+            </div>
+            
+            <div class="row row-cols-1 row-cols-md-3 g-4"> 
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/riviera/deptos/latitud_703_5.jpg" class="card-img-top" alt="Torre Latitud">
+                        <div class="card-body">
+                            <h5 class="card-title">Torre Latitud</h5>
+                            <h6>Riviera Veracruzana</h6>
+                            <h6 class="text-muted small">
+                                2 <i class="fas fa-bed"></i> | 2 <i class="fas fa-bath"></i> | 2 <i class="fas fa-car"></i> 
+                            </h6>
+                            <h6 class="text-muted small">
+                                <i class="fa fa-arrows-alt me-1"></i> 180 m² / Nivel 7
+                            </h6>
+                            <p class="card-text small text-muted mb-2">Cuota Mtto: $ 5,200</p>
+                            <h5 class="fw-bold text-success mt-3">$3,700,000</h5>
+                            <a href="https://www.youtube.com/shorts/d0PEQLM6RK4" target="_blank" class="btn btn-primary w-100 mt-2">Ver Video <i class="fab fa-youtube ms-2"></i></a>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/riviera/deptos/ame_PlayaMarina_0.jpg" class="card-img-top" alt="Torre Playa Marina">
+                        <div class="card-body">
+                            <h5 class="card-title">Torre Playa Marina</h5>
+                            <h6>Riviera Veracruzana</h6>
+                            <h6 class="text-muted small">
+                                3 <i class="fas fa-bed"></i> | 3 <i class="fas fa-bath"></i> | 3 <i class="fas fa-car"></i> 
+                            </h6>
+                            <h6 class="text-muted small">
+                                <i class="fa fa-arrows-alt me-1"></i> 230 m² / Nivel 15
+                            </h6>
+                            <p class="card-text small text-muted mb-2">Cuota Mtto: $ 9,200</p>
+                            <h5 class="fw-bold text-success mt-3">$7,500,000</h5>
+                            <a href="https://www.youtube.com/watch?v=SmNK0ERG2pQ" target="_blank" class="btn btn-primary w-100 mt-2">Ver Video <i class="fab fa-youtube ms-2"></i></a>
+                            <a href="https://www.youtube.com/shorts/PRXQbiyc8tE" target="_blank" class="btn btn-outline-primary w-100 mt-2">Amenidades</a>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/riviera/deptos/VistaCumbre_3Rec_18.jpg" class="card-img-top" alt="Vista Cumbre">
+                        <div class="card-body">
+                            <h5 class="card-title">Vista Cumbre Preventa</h5>
+                            <h6>Riviera Veracruzana, Ver.</h6>
+                            <h6 class="text-muted small">
+                                1 <i class="fas fa-bed"></i> | 1 <i class="fas fa-bath"></i> | 1 <i class="fas fa-car"></i> 
+                            </h6>
+                            <h6 class="text-muted small">
+                                <i class="fa fa-arrows-alt me-1"></i> 60 m²
+                            </h6>
+                            <p class="card-text small text-muted mb-2">Cuota Mtto: $ 2,200</p>
+                            <h5 class="fw-bold text-success mt-3">Desde $2,090,000</h5>
+                            <a href="#" class="btn btn-outline-primary w-100 mt-2 disabled">Video No Disponible</a>
+                        </div>
+                    </div>
+                </div> 
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="listing-section py-5">
+        <div class="container">
+            <div class="type-item mb-5">
+                <h2 class="text-center display-6 fw-bold">L O C A L E S / O F I C I N A S</h2>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 g-4"> 
+            </div>  
+        </div>
+    </section>
+ 
+
+    <section class="listing-section py-5 bg-light">
+        <div class="container">
+            <div class="type-item mb-5">
+               <h2 class="text-center display-6 fw-bold">T E R R E N O S</h2>
+            </div>
+            
+            <div class="row row-cols-1 row-cols-md-3 g-4"> 
+                
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/riviera/terrenos/altamira_1.jpg" class="card-img-top" alt="Punta Tiburon">
+                        <div class="card-body">
+                            <h5 class="card-title">Punta Tiburón</h5>
+                            <h6>Riviera Veracruzana</h6>
+                            <p class="card-text small text-muted mb-2">Superficie: 825 m²</p>
+                            <p class="card-text small text-muted mb-2">Cuota Mtto: $ 5,015</p>
+                            <h5 class="fw-bold text-success mt-3">$5,000,000</h5>
+                            <a href="https://www.youtube.com/shorts/IEtDYzLotzA" target="_blank" class="btn btn-primary w-100 mt-2">Ver Video <i class="fab fa-youtube ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/riviera/terrenos/piedra_reyes.jpg" class="card-img-top" alt="La Piedra">
+                        <div class="card-body">
+                            <h5 class="card-title">La Piedra</h5>
+                            <h6>Alvarado, Veracruz</h6>
+                            <p class="card-text small text-muted mb-2">Superficie: 633 m²</p>
+                            <h5 class="fw-bold text-success mt-3">$330,000</h5>
+                            <a href="https://www.youtube.com/watch?v=7S2ilWqO9IQ" target="_blank" class="btn btn-primary w-100 mt-2">Ver Video <i class="fab fa-youtube ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="footer-links py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 mb-4 mb-md-0">
+            <h5 class="text-uppercase fw-bold mb-3">Síguenos</h5>
+            <div class="social-icons mt-2 fs-3">
+              <a href="https://wa.me/522293019294" class="text-white mx-2" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+              <a href="https://www.facebook.com/cMagnaDjesus" class="text-white mx-2" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.youtube.com/@propiedades-veracruz_2024" class="text-white mx-2" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+              <a href="https://www.tiktok.com/@cmagnadj" class="text-white mx-2" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
+              <a href="https://www.instagram.com/propiedades_veracruz/" class="text-white mx-2" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+
+          <div class="col-md-3 mb-4 mb-md-0">
+              <h5 class="text-uppercase fw-bold mb-3">Contáctanos</h5>
+              <p class="text-white mb-2"><i class="fas fa-map-marker-alt me-2" style="color: var(--color-secondary);"></i> Boca del Río, Ver., México</p>
+              <p class="text-white mb-2"><i class="fas fa-envelope me-2" style="color: var(--color-secondary);"></i> cmagnadj@gmail.com</p>
+              <p class="text-white mb-2"><i class="fas fa-phone me-2" style="color: var(--color-secondary);"></i> +52 (229) 301 9294</p>
+              <p class="text-white mb-0"><i class="fas fa-clock me-2" style="color: var(--color-secondary);"></i> L-D: 8:00 - 17:00 Hrs.</p>
+          </div>
+
+          <div class="col-md-3 mb-4 mb-md-0">
+              <h5 class="text-uppercase fw-bold mb-3">Recursos</h5>
+              <ul class="list-unstyled">
+                  <li><a href="blog.html" class="text-white text-decoration-none mb-2 d-block">Blog Inmobiliario</a></li>
+                  <li><a href="faq.html" class="text-white text-decoration-none mb-2 d-block">Preguntas Frecuentes</a></li>
+                  <li><a href="#" class="text-white text-decoration-none mb-2 d-block">Guía de Compra</a></li>
+                  <li><a href="#" class="text-white text-decoration-none mb-2 d-block">Guía de Venta</a></li>
+              </ul>
+          </div>
+
+          <div class="col-md-3 mb-4 mb-md-0">
+              <h5 class="text-uppercase fw-bold mb-3">Legal</h5>
+              <ul class="list-unstyled">
+                  <li><a href="privacy_policy.html" class="text-white text-decoration-none mb-2 d-block">Aviso de Privacidad</a></li>
+                  <li><a href="#" class="text-white text-decoration-none mb-2 d-block">Términos y Condiciones</a></li>
+                  <li><a href="#" class="text-white text-decoration-none mb-2 d-block">Aviso Legal</a></li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <footer class="text-white text-center py-3" style="background-color: var(--color-primary);">
+      <div class="container">
+          <p class="mb-0 small">© 2025 Propiedades Veracruz. Creado por: cmagna | Tel: 2293019294</p>
+      </div>
     </footer>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-
-    
   </body>
 </html>

@@ -10,7 +10,6 @@
         })(window,document,'script','dataLayer','GTM-WKHK8PCC');</script>
         <meta name="facebook-domain-verification" content="n2rytl6hcq28xq51tkm5y2flqyrny0" />
 
-
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,440 +17,555 @@
         <title>Preguntas Frecuentes - Propiedades Veracruz</title>
         <link rel="icon" href="img/banners/logo_01.jpg" />
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
-
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
 
         <style>
-
-            /* Ajuste para el banner de título */
-            .banner-text {
-                position: relative; /* Cambiado de absolute a relative para no sacarlo del flujo normal */
-                width: 100%; /* Ocupa todo el ancho */
-                text-align: center;
-                padding: 10px 0; /* Padding superior e inferior para el texto */
-                margin-top: -20px; /* Valor negativo para empujar el texto más arriba, ajusta si es necesario */
-                margin-bottom: 20px; /* Espacio debajo del título antes de la imagen */
+            :root {
+                --color-primary: #004872; /* Azul Marino */
+                --color-secondary: #ff9900; /* Naranja/Dorado para acentos */
+                --color-dark: #212529; /* Color para Navbar/Footer */
             }
-            .banner-text h2 {
-                margin-bottom: 0; /* Elimina el margen inferior por defecto del h2 */
+            
+            /* Navbar (uniformidad) */
+            .navbar {
+                background-color: var(--color-dark) !important;
             }
 
+            /* Contenedor principal para evitar que el contenido se pegue al navbar fijo */
+            .content-wrapper {
+                margin-top: 80px; 
+                padding-bottom: 50px; /* Espacio antes del footer */
+            }
+
+            /* Imagen Hero y Contenedor */
             .faq-hero-image-container {
                 position: relative;
                 width: 100%;
-                max-width: 1024px; /* O el ancho deseado para tu imagen */
-                margin: 0 auto 30px auto; /* Centra la imagen, 0 arriba, 30px abajo */
-                text-align: center; /* Centra la imagen si es más pequeña que el contenedor */
+                max-width: 1024px; 
+                margin: 0 auto 30px auto; 
+                text-align: center;
             }
             .faq-hero-image {
-                width: 100%; /* Asegura que la imagen sea responsiva */
+                width: 100%; 
                 height: auto;
-                border-radius: 8px; /* Pequeño borde redondeado para estética */
-                box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
+                border-radius: 8px; 
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
             }
 
+            /* Contenedor de FAQ */
             .faq-container {
                 max-width: 900px;
-                margin: 0 auto; /* Elimina el margin-top para que se ajuste a la imagen */
-                background-color: #fff;
-                padding: 30px;
-                border-radius: 8px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            }
-            h1 {
-                color: #2c3e50;
-                text-align: center;
-                margin-bottom: 30px;
-                border-bottom: 2px solid #3498db;
-                padding-bottom: 10px;
-            }
-            /* Estilo para los elementos <details> y <summary> */
-            details {
-                border: 1px solid #ddd;
-                padding: 15px;
-                margin-bottom: 15px;
-                border-radius: 5px;
-                background-color: #ecf0f1;
-                transition: background-color 0.3s;
-            }
-            details:hover {
-                background-color: #e0e6e8;
-            }
-            summary {
-                font-weight: bold;
-                font-size: 1.1em;
-                cursor: pointer;
-                color: #2980b9;
-                list-style: none; /* Oculta la flecha por defecto en algunos navegadores */
-            }
-            /* Para agregar un indicador de apertura */
-            summary::-webkit-details-marker {
-                display: none;
-            }
-            summary::after {
-                content: '▶'; /* Triángulo a la derecha */
-                margin-left: 10px;
-                float: right;
-                transition: transform 0.3s;
-            }
-            details[open] > summary::after {
-                content: '▼'; /* Triángulo hacia abajo cuando está abierto */
-            }
-            .respuesta {
-                padding-top: 10px;
-                border-top: 1px solid #ccc;
-                margin-top: 10px;
-                color: #34495e;
+                margin: 0 auto;
+                padding: 0 15px; /* Padding horizontal para móviles */
             }
 
-            /* NUEVOS ESTILOS PARA AGRUPACIÓN TEMÁTICA */
+            /* Estilo para el título H1 principal */
+            .faq-container h1 {
+                color: var(--color-primary); 
+                text-align: center;
+                margin-bottom: 30px;
+                border-bottom: 2px solid var(--color-secondary);
+                padding-bottom: 10px;
+                font-weight: 700;
+            }
+            
+            /* Estilo para los títulos de grupo (Categorías) */
             .group-title {
-                color: #004872; /* Color de tu footer, para mantener la coherencia */
+                color: var(--color-primary); 
                 margin-top: 40px;
-                margin-bottom: 15px;
+                margin-bottom: 20px;
                 padding-bottom: 5px;
-                border-bottom: 3px solid #3498db; /* Línea separadora clara */
+                border-bottom: 3px solid var(--color-secondary); /* Línea de acento */
                 font-size: 1.8em;
+                font-weight: 700;
+            }
+
+            /* Estilo del Acordeón de Bootstrap */
+            .accordion-button:not(.collapsed) {
+                color: #fff;
+                background-color: var(--color-primary);
+                box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .125);
+            }
+            .accordion-button {
                 font-weight: 600;
+                color: var(--color-primary);
             }
-            /* Estilo para el separador (hr) */
-            .faq-group hr {
-                margin-top: 0;
-                margin-bottom: 25px;
-                border-top: 1px solid #ccc;
-                display: none; /* Ocultamos el HR para usar solo el border-bottom del H2 */
+            /* Estilo de advertencia legal dentro del acordeón */
+            .accordion-body strong.warning-text, .accordion-body p strong {
+                font-weight: bold;
+                color: #c0392b; /* Rojo para advertencias */
             }
+
+            /* Estilo de pre-footer y footer (uniformidad) */
+            .footer-links {
+                background-color: var(--color-dark) !important;
+                color: white;
+            }
+            .footer-links h5 {
+                color: var(--color-secondary);
+            }
+            .footer-links a:hover {
+                color: var(--color-secondary) !important;
+            }
+            .footer-bottom {
+                background-color: var(--color-primary);
+            }
+
         </style>
     </head>
     <body>
 
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKHK8PCC"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        
-        <div class="page-banner faq-banner">
+        <div class="container-navbar">
             <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
                 <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img
-                    src="img/banners/logo_01.jpg"
-                    alt="logo"
-                    width="30"
-                    height="30"
-                    class="d-inline-block align-top"/>
-                    Propiedades-Veracruz</a>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                    <a class="nav-link text-white" href="boca.html">Boca del Rio</a>
-                    <a class="nav-link text-white" href="veracruz.html">Veracruz</a>
-                    <a class="nav-link text-white" href="riviera.html">Riviera Veracruzana</a>
-                    <a class="nav-link text-white" href="medellin.html">Medellin de Bravo</a>
-                    <a class="nav-link text-white" href="tips.html">Tips Inmobiliarios</a>
+                    <a class="navbar-brand" href="index.html">
+                        <img
+                        src="img/banners/logo_01.jpg"
+                        alt="logo"
+                        width="30"
+                        height="30"
+                        class="d-inline-block align-top me-2"/>
+                        Propiedades-Veracruz
+                    </a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup"
+                        aria-controls="navbarNavAltMarkup"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav ms-auto">
+                            <a class="nav-link text-white" href="boca.html">Boca del Río</a>
+                            <a class="nav-link text-white" href="veracruz.html">Veracruz</a>
+                            <a class="nav-link text-white" href="riviera.html">Riviera Veracruzana</a>
+                            <a class="nav-link text-white" href="medellin.html">Medellín de Bravo</a>
+                            <a class="nav-link text-white" href="tips.html">Tips Inmobiliarios</a>
+                        </div>
                     </div>
-                </div>
                 </div>
             </nav>
         </div>
 
+        <div class="content-wrapper container">
+            
+            <div class="faq-hero-image-container">
+                <img src="img/banners/FAQ_img.png" alt="Preguntas Frecuentes Inmuebles Veracruz" class="faq-hero-image">
+            </div>
+            
+            <div class="faq-container">
+                <h1>Preguntas Frecuentes sobre Compra y Venta de Inmuebles en Veracruz </h1>
 
-        <div class="faq-hero-image-container">
-            <img src="img/banners/FAQ_img.png" alt="Preguntas Frecuentes Inmuebles Veracruz" class="faq-hero-image">
-        </div>
-        <div class="faq-container">
-            <h1>Preguntas Frecuentes sobre Compra y Venta de Inmuebles en Veracruz </h1>
-
-            <div class="faq-group">
                 <h2 class="group-title">📍 Ubicación, Clima y Estilo de Vida</h2>
 
-                <details>
-                    <summary>¿Cuál es la zona más segura para vivir en Veracruz y sus alrededores?</summary>
-                    <div class="respuesta">
-                        <p>La seguridad es una prioridad al elegir un hogar. Si bien la percepción de seguridad puede ser subjetiva y la situación puede variar, basándonos en el desarrollo urbano, la infraestructura y los testimonios generales, podemos destacar algunas zonas con índices de criminalidad percibidos como más bajos y con mayor tranquilidad en la conurbación de Veracruz:</p>
+                <div class="accordion" id="accordionLocation">
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                ¿Cuál es la zona más segura para vivir en Veracruz y sus alrededores?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionLocation">
+                            <div class="accordion-body">
+                                <p>La seguridad es una prioridad al elegir un hogar. Si bien la percepción de seguridad puede ser subjetiva y la situación puede variar, basándonos en el desarrollo urbano, la infraestructura y los testimonios generales, podemos destacar algunas zonas con índices de criminalidad percibidos como más bajos y con mayor tranquilidad en la conurbación de Veracruz:</p>
 
-                        <ul>
-                            <li>
-                                <strong>Boca del Río:</strong>
-                                <p>En general, Boca del Río es percibida como la zona más segura. Fraccionamientos  y colonias residenciales consolidadas** suelen contar con:
                                 <ul>
-                                    <li>**Mayor presencia de seguridad privada:** En muchos fraccionamientos.</li>
-                                    <li>**Mejor infraestructura urbana:** Calles bien iluminadas y mantenimiento constante.</li>
-                                    <li>**Índices delictivos más bajos:** Comparado con otras áreas urbanas más densas.</li>
+                                    <li>
+                                        <strong>Boca del Río:</strong>
+                                        <p>En general, Boca del Río es percibida como la zona más segura. Fraccionamientos y colonias residenciales consolidadas suelen contar con:
+                                        <ul>
+                                            <li>**Mayor presencia de seguridad privada:** En muchos fraccionamientos.</li>
+                                            <li>**Mejor infraestructura urbana:** Calles bien iluminadas y mantenimiento constante.</li>
+                                            <li>**Índices delictivos más bajos:** Comparado con otras áreas urbanas más densas.</li>
+                                        </ul>
+                                        Su carácter residencial y turístico contribuye a una mayor vigilancia y a un ambiente más controlado.</p>
+                                    </li>
+                                    <li>
+                                        <strong>Riviera Veracruzana:</strong>
+                                        <p>Esta es, sin duda, la zona con el **mayor nivel de seguridad y control de acceso**. Los desarrollos de la Riviera Veracruzana se caracterizan por:
+                                        <ul>
+                                            <li>**Acceso controlado 24/7 y seguridad privada:** Estrictos filtros de entrada y vigilancia constante.</li>
+                                            <li>**Ambiente exclusivo y de baja densidad:** Menor afluencia de personas ajenas a la comunidad.</li>
+                                            <li>**Diseño urbano planeado:** Con calles internas seguras y amenidades propias.</li>
+                                        </ul>
+                                        Es ideal para quienes buscan una tranquilidad excepcional y están dispuestos a invertir en ella.</p>
+                                    </li>
+                                    <li>
+                                        <strong>Medellín de Bravo:</strong>
+                                        <p>En los nuevos desarrollos residenciales de Medellín, especialmente aquellos que son **fraccionamientos privados y con acceso controlado**, la seguridad es un factor importante que se ha priorizado. Aunque el municipio en general puede tener áreas con diferentes dinámicas, los fraccionamientos modernos ofrecen:
+                                        <ul>
+                                            <li>**Entradas controladas:** Asegurando un flujo de personas restringido.</li>
+                                            <li>**Mayor tranquilidad:** Debido a su ubicación fuera del bullicio de la ciudad.</li>
+                                            <li>**Comunidad emergente:** Donde los vecinos suelen conocerse y cuidarse mutuamente.</li>
+                                        </ul>
+                                        Es una opción atractiva para quienes buscan mayor seguridad en un entorno más espacioso y familiar.</p>
+                                    </li>
+                                    <li>
+                                        <strong>Veracruz (Puerto - Algunas zonas):</strong>
+                                        <p>Dentro de la ciudad de Veracruz, algunas colonias residenciales tradicionales mantienen un buen nivel de seguridad percibida. Fraccionamientos como **Virginia y Reforma** son ejemplos de zonas consolidadas que, por su ubicación céntrica, infraestructura y densidad poblacional, no suelen presentar los mismos retos de seguridad que otras áreas más extensas de la ciudad. La proximidad a avenidas principales y zonas comerciales también contribuye a una mayor afluencia y vigilancia.</p>
+                                    </li>
                                 </ul>
-                                Su carácter residencial y turístico contribuye a una mayor vigilancia y a un ambiente más controlado.</p>
-                            </li>
-                            <li>
-                                <strong>Riviera Veracruzana:</strong>
-                                <p>Esta es, sin duda, la zona con el **mayor nivel de seguridad y control de acceso**. Los desarrollos de la Riviera Veracruzana se caracterizan por:
-                                <ul>
-                                    <li>**Acceso controlado 24/7 y seguridad privada:** Estrictos filtros de entrada y vigilancia constante.</li>
-                                    <li>**Ambiente exclusivo y de baja densidad:** Menor afluencia de personas ajenas a la comunidad.</li>
-                                    <li>**Diseño urbano planeado:** Con calles internas seguras y amenidades propias.</li>
-                                </ul>
-                                Es ideal para quienes buscan una tranquilidad excepcional y están dispuestos a invertir en ella.</p>
-                            </li>
-                            <li>
-                                <strong>Medellín de Bravo:</strong>
-                                <p>En los nuevos desarrollos residenciales de Medellín, especialmente aquellos que son **fraccionamientos privados y con acceso controlado**, la seguridad es un factor importante que se ha priorizado. Aunque el municipio en general puede tener áreas con diferentes dinámicas, los fraccionamientos modernos ofrecen:
-                                <ul>
-                                    <li>**Entradas controladas:** Asegurando un flujo de personas restringido.</li>
-                                    <li>**Mayor tranquilidad:** Debido a su ubicación fuera del bullicio de la ciudad.</li>
-                                    <li>**Comunidad emergente:** Donde los vecinos suelen conocerse y cuidarse mutuamente.</li>
-                                </ul>
-                                Es una opción atractiva para quienes buscan mayor seguridad en un entorno más espacioso y familiar.</p>
-                            </li>
-                            <li>
-                                <strong>Veracruz (Puerto - Algunas zonas):</strong>
-                                <p>Dentro de la ciudad de Veracruz, algunas colonias residenciales tradicionales mantienen un buen nivel de seguridad percibida. Fraccionamientos como **Virginia y Reforma** son ejemplos de zonas consolidadas que, por su ubicación céntrica, infraestructura y densidad poblacional, no suelen presentar los mismos retos de seguridad que otras áreas más extensas de la ciudad. La proximidad a avenidas principales y zonas comerciales también contribuye a una mayor afluencia y vigilancia.</p>
-                            </li>
-                        </ul>
-                        <p>Es importante siempre visitar la zona a diferentes horas del día y la noche, conversar con vecinos y observar el entorno. Nuestro equipo puede brindarte información más detallada sobre fraccionamientos específicos y sus protocolos de seguridad.</p>
+                                <p>Es importante siempre visitar la zona a diferentes horas del día y la noche, conversar con vecinos y observar el entorno. Nuestro equipo puede brindarte información más detallada sobre fraccionamientos específicos y sus protocolos de seguridad.</p>
+                            </div>
+                        </div>
                     </div>
-                </details>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                ¿Cuál es el mejor lugar para vivir en Veracruz y sus alrededores?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionLocation">
+                            <div class="accordion-body">
+                                <p>Elegir el "mejor lugar para vivir" en la zona conurbada de Veracruz dependerá mucho de tu estilo de vida, necesidades familiares y presupuesto. Aquí te desglosamos las áreas más buscadas:</p>
 
-                <details>
-                    <summary>¿Cuál es el mejor lugar para vivir en Veracruz y sus alrededores?</summary>
-                    <div class="respuesta">
-                        <p>Elegir el "mejor lugar para vivir" en la zona conurbada de Veracruz dependerá mucho de tu estilo de vida, necesidades familiares y presupuesto. Aquí te desglosamos las áreas más buscadas:</p>
-
-                        <ul>
-                            <li>
-                                <strong>Boca del Río: Ideal para vida moderna, servicios y cercanía a playa.</strong>
-                                <p>Considerada la zona de mayor desarrollo y plusvalía. Ofrece **seguridad**, amplios centros comerciales (Plaza Las Américas, Andamar, Plaza Mocambo), hospitales privados, las mejores escuelas, universidades y una vibrante vida social y gastronómica. Es perfecta para **familias, profesionales y quienes buscan comodidad y acceso rápido a todo.** Aquí encontrarás fraccionamientos exclusivos como **Costa de Oro, Las Américas o Jardines del Virginia**.</p>
-                            </li>
-                            <li>
-                                <strong>Riviera Veracruzana: Exclusividad, tranquilidad y contacto con la naturaleza.</strong>
-                                <p>Una extensión de Boca del Río hacia el sur, caracterizada por **desarrollos residenciales de lujo** (como El Dorado, Punta Tiburón, Lomas de La Rioja, Lomas Residencial) con amenidades como campos de golf, marinas y seguridad 24/7. Ofrece un ambiente más **tranquilo, vistas al río o lagunas**, ideal para quienes valoran la privacidad y el contacto con áreas verdes, aunque implica un mayor desplazamiento para algunos servicios urbanos.</p>
-                            </li>
-                            <li>
-                                <strong>Veracruz (Puerto): Historia, diversidad y vida tradicional.</strong>
-                                <p>La ciudad de Veracruz ofrece una mezcla de tradición y actividad portuaria. Puedes encontrar opciones en el **Centro Histórico** para amantes de la cultura, o fraccionamientos consolidados como **Reforma o Virginia**, que brindan accesibilidad a mercados, hospitales públicos, el Malecón y una vida de barrio más arraigada. Es ideal para quienes buscan **precios más accesibles, la esencia del puerto** y no les importa la intensidad de la vida urbana.</p>
-                            </li>
-                            <li>
-                                <strong>Medellín de Bravo: Crecimiento, espacios amplios y precios competitivos.</strong>
-                                <p>Ubicado a las afueras de la conurbación, Medellín de Bravo está experimentando un notable crecimiento. Ofrece **terrenos y propiedades más amplias a precios más competitivos**. Es una excelente opción para **familias que buscan mayor espacio, tranquilidad**, y para **inversionistas** que apuestan por la plusvalía futura de una zona en expansión, aunque con la necesidad de mayor desplazamiento para acceder a ciertos servicios de la ciudad.</p>
-                            </li>
-                        </ul>
-                        <p>Te invitamos a explorar estas zonas con nosotros para encontrar la que mejor se adapte a ti.</p>
-                    </div>
-                </details>
-
-                <details>
-                    <summary>¿Cuál es la zona de mayor lujo y poder adquisitivo en Veracruz y sus alrededores?</summary>
-                    <div class="respuesta">
-                        <p>Cuando se habla de la zona con mayor lujo, exclusividad y poder adquisitivo en la conurbación Veracruz-Boca del Río, la respuesta principal se centra claramente en la **Riviera Veracruzana y Boca del Río**, ambas distinguiéndose por sus impresionantes **torres residenciales a pie de playa o con vistas al mar**.</p>
-
-                        <ul>
-                            <li>
-                                <strong>Boca del Río: Lujo, vida vibrante y un boulevard de primer nivel.</strong>
-                                <p>Boca del Río es un referente de exclusividad y modernidad, combinando la vida urbana con el acceso directo a la costa. Los Fraccionamientos son altamente valorados por:
                                 <ul>
-                                    <li>**Ubicación Premium:** Cercanía a los mejores centros comerciales (Plaza Las Américas, Andamar), hospitales privados, universidades y escuelas de prestigio.</li>
-                                    <li>**Boulevard Costero Exclusivo:** Su emblemático boulevard es un epicentro de actividad, albergando una amplia variedad de **restaurantes gourmet, casinos, bares, prestigiosas cadenas de hoteles y modernas torres de departamentos a pie de playa o con espectaculares vistas al Golfo de México**. Estas torres ofrecen amenidades de alta gama como albercas infinitas, gimnasios, salones de eventos y seguridad 24/7.</li>
-                                    <li>**Vida Social Vibrante:** Una dinámica vida social y cultural, con actividades y eventos constantes justo frente al mar.</li>
+                                    <li>
+                                        <strong>Boca del Río: Ideal para vida moderna, servicios y cercanía a playa.</strong>
+                                        <p>Considerada la zona de mayor desarrollo y plusvalía. Ofrece **seguridad**, amplios centros comerciales (Plaza Las Américas, Andamar, Plaza Mocambo), hospitales privados, las mejores escuelas, universidades y una vibrante vida social y gastronómica. Es perfecta para **familias, profesionales y quienes buscan comodidad y acceso rápido a todo.** Aquí encontrarás fraccionamientos exclusivos como **Costa de Oro, Las Américas o Jardines del Virginia**.</p>
+                                    </li>
+                                    <li>
+                                        <strong>Riviera Veracruzana: Exclusividad, tranquilidad y contacto con la naturaleza.</strong>
+                                        <p>Una extensión de Boca del Río hacia el sur, caracterizada por **desarrollos residenciales de lujo** (como El Dorado, Punta Tiburón, Lomas de La Rioja, Lomas Residencial) con amenidades como campos de golf, marinas y seguridad 24/7. Ofrece un ambiente más **tranquilo, vistas al río o lagunas**, ideal para quienes valoran la privacidad y el contacto con áreas verdes, aunque implica un mayor desplazamiento para algunos servicios urbanos.</p>
+                                    </li>
+                                    <li>
+                                        <strong>Veracruz (Puerto): Historia, diversidad y vida tradicional.</strong>
+                                        <p>La ciudad de Veracruz ofrece una mezcla de tradición y actividad portuaria. Puedes encontrar opciones en el **Centro Histórico** para amantes de la cultura, o fraccionamientos consolidados como **Reforma o Virginia**, que brindan accesibilidad a mercados, hospitales públicos, el Malecón y una vida de barrio más arraigada. Es ideal para quienes buscan **precios más accesibles, la esencia del puerto** y no les importa la intensidad de la vida urbana.</p>
+                                    </li>
+                                    <li>
+                                        <strong>Medellín de Bravo: Crecimiento, espacios amplios y precios competitivos.</strong>
+                                        <p>Ubicado a las afueras de la conurbación, Medellín de Bravo está experimentando un notable crecimiento. Ofrece **terrenos y propiedades más amplias a precios más competitivos**. Es una excelente opción para **familias que buscan mayor espacio, tranquilidad**, y para **inversionistas** que apuestan por la plusvalía futura de una zona en expansión, aunque con la necesidad de mayor desplazamiento para acceder a ciertos servicios de la ciudad.</p>
+                                    </li>
                                 </ul>
-                                Es ideal para quienes buscan el confort del lujo con todas las comodidades de la ciudad y entretenimiento al alcance de la mano.</p>
-                            </li>
-                            <li>
-                                <strong>Riviera Veracruzana: Exclusividad, tranquilidad y contacto con la naturaleza.</strong>
-                                <p>Esta franja costera, al sur de Boca del Río, representa el máximo nivel de exclusividad y privacidad. Aquí se encuentran desarrollos residenciales de alto nivel caracterizados por:
+                                <p>Te invitamos a explorar estas zonas con nosotros para encontrar la que mejor se adapte a ti.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                ¿Cuál es la zona de mayor lujo y poder adquisitivo en Veracruz y sus alrededores?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionLocation">
+                            <div class="accordion-body">
+                                <p>Cuando se habla de la zona con mayor lujo, exclusividad y poder adquisitivo en la conurbación Veracruz-Boca del Río, la respuesta principal se centra claramente en la **Riviera Veracruzana y Boca del Río**, ambas distinguiéndose por sus impresionantes **torres residenciales a pie de playa o con vistas al mar**.</p>
+
                                 <ul>
-                                    <li>**Fraccionamientos de Alta Gama:** Propiedades con valores que superan los rangos promedio, muchas de ellas con acceso directo a lagunas navegables o vistas al mar.</li>
-                                    <li>**Amenidades de Resort:** Clubes de golf, marinas privadas, acceso a playas privadas, extensas áreas verdes y seguridad privada de primer nivel.</li>
-                                    <li>**Torres y Residencias de Vanguardia:** Se destaca por sus **exclusivas residencias de autor y sus selectas torres de departamentos frente al mar o con vistas privilegiadas**, ofreciendo un estilo de vida de élite en un entorno natural y sereno.</li>
-                                    <li>**Calidad de Vida:** Un ambiente tranquilo, alejado del bullicio, ideal para quienes valoran la privacidad y el contacto con la naturaleza sin renunciar al lujo.</li>
+                                    <li>
+                                        <strong>Boca del Río: Lujo, vida vibrante y un boulevard de primer nivel.</strong>
+                                        <p>Boca del Río es un referente de exclusividad y modernidad, combinando la vida urbana con el acceso directo a la costa. Los Fraccionamientos son altamente valorados por:
+                                        <ul>
+                                            <li>**Ubicación Premium:** Cercanía a los mejores centros comerciales (Plaza Las Américas, Andamar), hospitales privados, universidades y escuelas de prestigio.</li>
+                                            <li>**Boulevard Costero Exclusivo:** Su emblemático boulevard es un epicentro de actividad, albergando una amplia variedad de **restaurantes gourmet, casinos, bares, prestigiosas cadenas de hoteles y modernas torres de departamentos a pie de playa o con espectaculares vistas al Golfo de México**. Estas torres ofrecen amenidades de alta gama como albercas infinitas, gimnasios, salones de eventos y seguridad 24/7.</li>
+                                            <li>**Vida Social Vibrante:** Una dinámica vida social y cultural, con actividades y eventos constantes justo frente al mar.</li>
+                                        </ul>
+                                        Es ideal para quienes buscan el confort del lujo con todas las comodidades de la ciudad y entretenimiento al alcance de la mano.</p>
+                                    </li>
+                                    <li>
+                                        <strong>Riviera Veracruzana: Exclusividad, tranquilidad y contacto con la naturaleza.</strong>
+                                        <p>Esta franja costera, al sur de Boca del Río, representa el máximo nivel de exclusividad y privacidad. Aquí se encuentran desarrollos residenciales de alto nivel caracterizados por:
+                                        <ul>
+                                            <li>**Fraccionamientos de Alta Gama:** Propiedades con valores que superan los rangos promedio, muchas de ellas con acceso directo a lagunas navegables o vistas al mar.</li>
+                                            <li>**Amenidades de Resort:** Clubes de golf, marinas privadas, acceso a playas privadas, extensas áreas verdes y seguridad privada de primer nivel.</li>
+                                            <li>**Torres y Residencias de Vanguardia:** Se destaca por sus **exclusivas residencias de autor y sus selectas torres de departamentos frente al mar o con vistas privilegiadas**, ofreciendo un estilo de vida de élite en un entorno natural y sereno.</li>
+                                            <li>**Calidad de Vida:** Un ambiente tranquilo, alejado del bullicio, ideal para quienes valoran la privacidad y el contacto con la naturaleza sin renunciar al lujo.</li>
+                                        </ul>
+                                        Aquí la inversión se centra en propiedades que prometen una vida de alto nivel y una constante plusvalía.</p>
+                                    </li>
                                 </ul>
-                                Aquí la inversión se centra en propiedades que prometen una vida de alto nivel y una constante plusvalía.</p>
-                            </li>
-                        </ul>
-                        <p>En resumen, tanto la **Riviera Veracruzana como Boca del Río** ofrecen las opciones más lujosas de la región, ya sea que prefieras una moderna torre a pie de playa con todas las amenidades urbanas y la vida vibrante del boulevard, o una residencia exclusiva en un desarrollo con campo de golf y marina. Te invitamos a explorar las opciones de propiedades de lujo que tenemos en estas prestigiosas zonas para encontrar tu lugar ideal.</p>
+                                <p>En resumen, tanto la **Riviera Veracruzana como Boca del Río** ofrecen las opciones más lujosas de la región, ya sea que prefieras una moderna torre a pie de playa con todas las amenidades urbanas y la vida vibrante del boulevard, o una residencia exclusiva en un desarrollo con campo de golf y marina. Te invitamos a explorar las opciones de propiedades de lujo que tenemos en estas prestigiosas zonas para encontrar tu lugar ideal.</p>
+                            </div>
+                        </div>
                     </div>
-                </details>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                ¿Cómo es el clima anual en Veracruz y qué fenómenos naturales debo considerar?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionLocation">
+                            <div class="accordion-body">
+                                <p>El clima en la zona conurbada de Veracruz (Veracruz, Boca del Río, Riviera Veracruzana, Medellín) es predominantemente **cálido subhúmedo**, caracterizado por una alta humedad y ciclos bien definidos. Conocer estos patrones es clave para disfrutar de su nuevo hogar:</p>
 
-                <details>
-                    <summary>¿Cómo es el clima anual en Veracruz y qué fenómenos naturales debo considerar?</summary>
-                    <div class="respuesta">
-                        <p>El clima en la zona conurbada de Veracruz (Veracruz, Boca del Río, Riviera Veracruzana, Medellín) es predominantemente **cálido subhúmedo**, caracterizado por una alta humedad y ciclos bien definidos. Conocer estos patrones es clave para disfrutar de su nuevo hogar:</p>
-
-                        <ul>
-                            <li>
-                                <strong>Temporada de Calor Intenso y Humedad (Mayo - Octubre):</strong>
-                                <p>Las temperaturas comienzan a subir en mayo, alcanzando su punto más alto entre **julio y agosto**, coincidiendo a veces con la "Canícula". Las máximas suelen superar los 32°C, y la alta humedad genera una sensación térmica considerablemente mayor. Es la época ideal para disfrutar de la playa, pero también para valorar propiedades con buen sistema de **aire acondicionado y ventilación**. El calor puede persistir hasta inicios de octubre.</p>
-                            </li>
-                            <li>
-                                <strong>Temporada de Lluvias (Junio - Octubre):</strong>
-                                <p>Las lluvias se concentran de **junio a octubre**. Generalmente son aguaceros fuertes pero de corta duración, aunque también pueden presentarse sistemas más prolongados. Durante esta temporada, es fundamental asegurarse de que la propiedad esté ubicada en una **zona con buen drenaje** y sin historial de inundaciones, y que la construcción tenga un buen sistema de impermeabilización.</p>
-                            </li>
-                            <li>
-                                <strong>Temporada de "Nortes" (Octubre - Marzo):</strong>
-                                <p>Este fenómeno es muy característico de la región. Son vientos fuertes y fríos que llegan con los frentes fríos, principalmente de **octubre a marzo**. Los meses de mayor intensidad son diciembre, enero y febrero.
                                 <ul>
-                                    <li>**Impacto:** Pueden causar un descenso notorio de la temperatura (hasta 15-18°C), fuertes ráfagas de viento y marejadas en la costa.</li>
-                                    <li>**Consideraciones Inmobiliarias:** En propiedades cercanas al mar, es crucial verificar la **calidad de ventanas, canceles y la resistencia estructural** al viento y la corrosión salina. Un buen aislamiento térmico es una ventaja.</li>
-                                </ul></p>
-                            </li>
-                            <li>
-                                <strong>Temporada de Fríos Suaves (Noviembre - Abril):</strong>
-                                <p>Fuera de los episodios de "Nortes", los meses de **noviembre a abril** ofrecen un clima más templado y agradable, con días soleados y noches frescas, ideales para actividades al aire libre.</p>
-                            </li>
-                            <li>
-                                <strong>Temporada de Huracanes (Junio - Noviembre):</strong>
-                                <p>La región se encuentra en la franja del Atlántico con temporada de huracanes de **junio a noviembre**, con mayor actividad de **agosto a octubre**. Aunque un impacto directo no es anual, el principal riesgo asociado son las **lluvias torrenciales** que pueden provocar inundaciones repentinas y crecidas de ríos. Siempre es recomendable informarse sobre los planes de Protección Civil de la zona y la elevación de la propiedad.</p>
-                            </li>
-                        </ul>
-                        <p>Nuestro equipo puede brindarle información específica sobre el historial climático y de riesgos de las propiedades de su interés, ayudándole a tomar una decisión informada.</p>
+                                    <li>
+                                        <strong>Temporada de Calor Intenso y Humedad (Mayo - Octubre):</strong>
+                                        <p>Las temperaturas comienzan a subir en mayo, alcanzando su punto más alto entre **julio y agosto**, coincidiendo a veces con la "Canícula". Las máximas suelen superar los 32°C, y la alta humedad genera una sensación térmica considerablemente mayor. Es la época ideal para disfrutar de la playa, pero también para valorar propiedades con buen sistema de **aire acondicionado y ventilación**. El calor puede persistir hasta inicios de octubre.</p>
+                                    </li>
+                                    <li>
+                                        <strong>Temporada de Lluvias (Junio - Octubre):</strong>
+                                        <p>Las lluvias se concentran de **junio a octubre**. Generalmente son aguaceros fuertes pero de corta duración, aunque también pueden presentarse sistemas más prolongados. Durante esta temporada, es fundamental asegurarse de que la propiedad esté ubicada en una **zona con buen drenaje** y sin historial de inundaciones, y que la construcción tenga un buen sistema de impermeabilización.</p>
+                                    </li>
+                                    <li>
+                                        <strong>Temporada de "Nortes" (Octubre - Marzo):</strong>
+                                        <p>Este fenómeno es muy característico de la región. Son vientos fuertes y fríos que llegan con los frentes fríos, principalmente de **octubre a marzo**. Los meses de mayor intensidad son diciembre, enero y febrero.
+                                        <ul>
+                                            <li>**Impacto:** Pueden causar un descenso notorio de la temperatura (hasta 15-18°C), fuertes ráfagas de viento y marejadas en la costa.</li>
+                                            <li>**Consideraciones Inmobiliarias:** En propiedades cercanas al mar, es crucial verificar la **calidad de ventanas, canceles y la resistencia estructural** al viento y la corrosión salina. Un buen aislamiento térmico es una ventaja.</li>
+                                        </ul></p>
+                                    </li>
+                                    <li>
+                                        <strong>Temporada de Fríos Suaves (Noviembre - Abril):</strong>
+                                        <p>Fuera de los episodios de "Nortes", los meses de **noviembre a abril** ofrecen un clima más templado y agradable, con días soleados y noches frescas, ideales para actividades al aire libre.</p>
+                                    </li>
+                                    <li>
+                                        <strong>Temporada de Huracanes (Junio - Noviembre):</strong>
+                                        <p>La región se encuentra en la franja del Atlántico con temporada de huracanes de **junio a noviembre**, con mayor actividad de **agosto a octubre**. Aunque un impacto directo no es anual, el principal riesgo asociado son las **lluvias torrenciales** que pueden provocar inundaciones repentinas y crecidas de ríos. Siempre es recomendable informarse sobre los planes de Protección Civil de la zona y la elevación de la propiedad.</p>
+                                    </li>
+                                </ul>
+                                <p>Nuestro equipo puede brindarle información específica sobre el historial climático y de riesgos de las propiedades de su interés, ayudándole a tomar una decisión informada.</p>
+                            </div>
+                        </div>
                     </div>
-                </details>
-            </div>
-            <div class="faq-group">
+                </div> 
                 <h2 class="group-title">💰 Financiamiento, Precio y Costos Adicionales</h2>
 
-                <details>
-                    <summary>¿Qué tipo de gastos adicionales debo considerar además del precio de la casa?</summary>
-                    <div class="respuesta">
-                        Debe considerar los **Gastos Notariales** (honorarios, impuestos de adquisición de inmuebles, derechos de registro) que en Veracruz suelen oscilar entre el **4% y 8%** del valor de la propiedad, dependiendo del municipio y el valor catastral. También considere los gastos de avalúo y comisión de la inmobiliaria (si aplica).
+                <div class="accordion" id="accordionFinances">
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                ¿Qué tipo de gastos adicionales debo considerar además del precio de la casa?
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionFinances">
+                            <div class="accordion-body">
+                                <p>Debe considerar los **Gastos Notariales** (honorarios, impuestos de adquisición de inmuebles, derechos de registro) que en Veracruz suelen oscilar entre el **4% y 8%** del valor de la propiedad, dependiendo del municipio y el valor catastral. También considere los gastos de avalúo y comisión de la inmobiliaria (si aplica).</p>
+                            </div>
+                        </div>
                     </div>
-                </details>
 
-                <details>
-                    <summary>¿Debo pagar Impuesto Sobre la Renta (ISR) al vender mi casa?</summary>
-                    <div class="respuesta">
-                        <p>Sí, la venta genera ISR, pero se puede **exentar** si la propiedad es su **casa habitación**, no ha vendido otra propiedad en los últimos tres años y el valor no supera el límite de UDIs establecido por la ley. Es fundamental demostrar la habitabilidad con documentación (recibos de luz, teléfono a su nombre, etc.).</p>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                ¿Debo pagar Impuesto Sobre la Renta (ISR) al vender mi casa?
+                            </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionFinances">
+                            <div class="accordion-body">
+                                <p>Sí, la venta genera ISR, pero se puede **exentar** si la propiedad es su **casa habitación**, no ha vendido otra propiedad en los últimos tres años y el valor no supera el límite de UDIs establecido por la ley. Es fundamental demostrar la habitabilidad con documentación (recibos de luz, teléfono a su nombre, etc.).</p>
+                            </div>
+                        </div>
                     </div>
-                </details>
 
-                <details>
-                    <summary>¿Cómo se determina el precio de venta correcto de mi casa o terreno?</summary>
-                    <div class="respuesta">
-                        <p>El precio se basa en un **avalúo profesional** o una estimación de valor de mercado realizada por un experto. No debe guiarse por el apego emocional o el precio del vecino. El mercado y el valor de las propiedades comparables son el criterio principal.</p>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                ¿Cómo se determina el precio de venta correcto de mi casa o terreno?
+                            </button>
+                        </h2>
+                        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionFinances">
+                            <div class="accordion-body">
+                                <p>El precio se basa en un **avalúo profesional** o una estimación de valor de mercado realizada por un experto. No debe guiarse por el apego emocional o el precio del vecino. El mercado y el valor de las propiedades comparables son el criterio principal.</p>
+                            </div>
+                        </div>
                     </div>
-                </details>
-
-            </div>
-            <div class="faq-group">
+                </div> 
                 <h2 class="group-title">📝 Proceso Legal y Documentación</h2>
 
-                <details>
-                    <summary>¿Qué documentos iniciales me solicitará mi Notario como comprador de un inmueble o propiedad en Veracruz?</summary>
-                    <div class="respuesta">
-                        <p>Al iniciar el proceso de compra de una propiedad en Veracruz, el Notario es una figura clave que garantiza la legalidad de la operación. Como comprador, el Notario se encargará de solicitarle la siguiente documentación básica para formalizar la transacción:</p>
+                <div class="accordion" id="accordionLegal">
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingEight">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                ¿Qué documentos iniciales me solicitará mi Notario como comprador de un inmueble o propiedad en Veracruz?
+                            </button>
+                        </h2>
+                        <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionLegal">
+                            <div class="accordion-body">
+                                <p>Al iniciar el proceso de compra de una propiedad en Veracruz, el Notario es una figura clave que garantiza la legalidad de la operación. Como comprador, el Notario se encargará de solicitarle la siguiente documentación básica para formalizar la transacción:</p>
 
-                        <ul>
-                            <li><strong>Identificación Oficial Vigente:</strong> Su Credencial del INE (por ambos lados) o Pasaporte.</li>
-                            <li><strong>Acta de Nacimiento:</strong> Algunos notarios la solicitan para corroborar datos y filiación.</li>
-                            <li><strong>CURP:</strong> Clave Única de Registro de Población.</li>
-                            <li><strong>Constancia de Situación Fiscal (RFC):</strong> Vigente, emitida por el SAT.</li>
-                            <li><strong>Comprobante de Domicilio:</strong> Reciente (no mayor a 3 meses), como recibo de luz, agua o teléfono para notificaciones.</li>
-                            <li><strong>Carátula de Estado de Cuenta Bancario:</strong> Donde se refleje la cuenta de origen de los fondos para la compra. Esto es esencial para cumplir con las normativas fiscales y de prevención de lavado de dinero, permitiendo a Hacienda identificar el origen y destino del capital.</li>
-                            <li><strong>Acta de Matrimonio (si aplica):</strong> Para definir el régimen patrimonial y si es necesaria la comparecencia del cónyuge.</li>
-                        </ul>
-
-                        <p><strong>Un Consejo Importante:</strong> El Notario es elegido y pagado por el comprador. Si usted no cuenta con un notario de confianza, le sugerimos encarecidamente **cotizar los honorarios y gastos notariales con al menos tres notarías diferentes**. Esto le permitirá comparar servicios, tiempos y costos, asegurando la mejor elección para su inversión.</p>
-                    </div>
-                </details>
-
-                <details>
-                    <summary>¿Qué documentos necesito tener listos para vender mi propiedad en Veracruz?</summary>
-                    <div class="respuesta">
-                        <p>La documentación se divide en dos grupos esenciales. Para evitar retrasos en el proceso notarial, debe asegurarse de que todos los nombres y datos coincidan exactamente con su identificación oficial y su escritura.</p>
-
-                        <h3>Documentos del Propietario (Vendedor)</h3>
-                        <ul>
-                            <li><strong>Identificación Oficial Vigente:</strong> INE o Pasaporte (de ambos cónyuges si aplica).</li>
-                            <li><strong>Acta de Matrimonio:</strong> Si el vendedor está casado, para definir el régimen patrimonial.</li>
-                            <li><strong>CURP y RFC:</strong> Clave Única de Registro de Población y Constancia de Situación Fiscal.</li>
-                            <li><strong>Comprobante de Domicilio:</strong> Reciente (no mayor a 3 meses), aunque no sea el de la propiedad en venta.</li>
-                            <li><strong>Carátula de Estado de Cuenta Bancario:</strong> Donde recibirá el pago, requerido para el cumplimiento de las leyes de Prevención de Lavado de Dinero y el SAT.</li>
-                        </ul>
-
-                        <h3>Documentos del Inmueble</h3>
-                        <ul>
-                            <li>
-                                <strong>Escritura Pública:</strong> Copia simple de la escritura inscrita en el Registro Público de la Propiedad (RPP) a nombre del vendedor.
-                                <p style="margin-top: 5px; font-weight: bold; color: #c0392b;">⚠️ Advertencia de Seguridad:</strong> El notario solicitará la **exhibición del original** para su cotejo y prevenir fraudes. Tenga el documento original disponible.</p>
-                            </li>
-                            <li>
-                                <strong>Cédula Catastral:</strong> Documento emitido por el Catastro Municipal que contiene la descripción técnica y valor del inmueble.
-                                <p style="font-weight: bold; color: #c0392b; margin-top: 5px;">🛑 Nota de Gestión:</strong>  Muchos notarios ofrecen gestoría para acelerar este proceso.</p>
-                            </li>
-                            <li><strong>Certificados o Cartas de No Adeudo (Predial y Agua):</strong>
-                                <p>Ambas constancias **tienen un costo** (derecho de expedición) y certifican que no hay deudas históricas:</p>
                                 <ul>
-                                    <li><strong>Predial:</strong> Constancia de No Adeudo de Impuesto Predial en la Tesorería de la **Municipalidad**. Se entrega al momento</li>
-                                    <li><strong>Agua:</strong> Constancia de No Adeudo ante el **organismo operador de agua** (Sistema de Agua) más cercano. Se entrega al momento</li>
+                                    <li><strong>Identificación Oficial Vigente:</strong> Su Credencial del INE (por ambos lados) o Pasaporte.</li>
+                                    <li><strong>Acta de Nacimiento:</strong> Algunos notarios la solicitan para corroborar datos y filiación.</li>
+                                    <li><strong>CURP:</strong> Clave Única de Registro de Población.</li>
+                                    <li><strong>Constancia de Situación Fiscal (RFC):</strong> Vigente, emitida por el SAT.</li>
+                                    <li><strong>Comprobante de Domicilio:</strong> Reciente (no mayor a 3 meses), como recibo de luz, agua o teléfono para notificaciones.</li>
+                                    <li><strong>Carátula de Estado de Cuenta Bancario:</strong> Donde se refleje la cuenta de origen de los fondos para la compra. Esto es esencial para cumplir con las normativas fiscales y de prevención de lavado de dinero, permitiendo a Hacienda identificar el origen y destino del capital.</li>
+                                    <li><strong>Acta de Matrimonio (si aplica):</strong> Para definir el régimen patrimonial y si es necesaria la comparecencia del cónyuge.</li>
                                 </ul>
-                            </li>
-                            <li><strong>Recibo de Luz:</strong> Ocacional</li>
-                        </ul>
 
-                        <p style="margin-top: 20px;">
-                            <em>Si su propiedad está en **Régimen de Condominio, tiene Hipoteca, o es un Local/Terreno**, se requiere documentación adicional. Consulte las preguntas específicas sobre esos temas en esta sección de FAQ.</em>
-                        </p>
+                                <p><strong>Un Consejo Importante:</strong> El Notario es elegido y pagado por el comprador. Si usted no cuenta con un notario de confianza, le sugerimos encarecidamente **cotizar los honorarios y gastos notariales con al menos tres notarías diferentes**. Esto le permitirá comparar servicios, tiempos y costos, asegurando la mejor elección para su inversión.</p>
+                            </div>
+                        </div>
                     </div>
-                </details>
 
-                <details>
-                    <summary>¿Qué diferencia existe entre el Certificado de Libertad de Gravamen (CLG) y el Aviso Preventivo?</summary>
-                    <div class="respuesta">
-                        <p>Ambos documentos son fundamentales en el proceso notarial y tienen objetivos distintos, pero complementarios, para garantizar una compraventa segura:</p>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingNine">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                ¿Qué documentos necesito tener listos para vender mi propiedad en Veracruz?
+                            </button>
+                        </h2>
+                        <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionLegal">
+                            <div class="accordion-body">
+                                <p>La documentación se divide en dos grupos esenciales. Para evitar retrasos en el proceso notarial, debe asegurarse de que todos los nombres y datos coincidan exactamente con su identificación oficial y su escritura.</p>
 
-                        <h3>Certificado de Libertad de Gravamen (CLG)</h3>
-                        <ul>
-                            <li><strong>Propósito:</strong> Es una **certificación informativa** emitida por el Registro Público de la Propiedad (RPP).</li>
-                            <li><strong>Función:</strong> Confirma el **estado legal actual e histórico** de la propiedad. Indica si existen o existieron hipotecas, embargos, o cualquier limitación de dominio registrada (gravámenes).</li>
-                            <li><strong>Seguridad:</strong> Le da al Notario la certeza de que la propiedad es apta para la venta o de que se conocen las cargas que deben liquidarse.</li>
-                        </ul>
+                                <h3>Documentos del Propietario (Vendedor)</h3>
+                                <ul>
+                                    <li><strong>Identificación Oficial Vigente:</strong> INE o Pasaporte (de ambos cónyuges si aplica).</li>
+                                    <li><strong>Acta de Matrimonio:</strong> Si el vendedor está casado, para definir el régimen patrimonial.</li>
+                                    <li><strong>CURP y RFC:</strong> Clave Única de Registro de Población y Constancia de Situación Fiscal.</li>
+                                    <li><strong>Comprobante de Domicilio:</strong> Reciente (no mayor a 3 meses), aunque no sea el de la propiedad en venta.</li>
+                                    <li><strong>Carátula de Estado de Cuenta Bancario:</strong> Donde recibirá el pago, requerido para el cumplimiento de las leyes de Prevención de Lavado de Dinero y el SAT.</li>
+                                </ul>
 
-                        <h3>Aviso Preventivo</h3>
-                        <ul>
-                            <li><strong>Propósito:</strong> Es un **candado legal** que el Notario inscribe de forma temporal en el RPP.</li>
-                            <li><strong>Función:</strong> **Reserva la prioridad** de la compraventa. Una vez inscrito, ningún tercero puede embargar, gravar, o registrar otra venta sobre la propiedad durante el tiempo que dure la escrituración.</li>
-                            <li><strong>Seguridad:</strong> Protege al comprador y a la Notaría de cualquier cambio o fraude de último momento. Sin este aviso, la propiedad podría ser afectada mientras se tramita la escritura final.</li>
-                        </ul>
+                                <h3>Documentos del Inmueble</h3>
+                                <ul>
+                                    <li>
+                                        <strong>Escritura Pública:</strong> Copia simple de la escritura inscrita en el Registro Público de la Propiedad (RPP) a nombre del vendedor.
+                                        <p style="margin-top: 5px;"><strong class="warning-text">⚠️ Advertencia de Seguridad:</strong> El notario solicitará la **exhibición del original** para su cotejo y prevenir fraudes. Tenga el documento original disponible.</p>
+                                    </li>
+                                    <li>
+                                        <strong>Cédula Catastral:</strong> Documento emitido por el Catastro Municipal que contiene la descripción técnica y valor del inmueble.
+                                        <p style="margin-top: 5px;"><strong class="warning-text">🛑 Nota de Gestión:</strong> Muchos notarios ofrecen gestoría para acelerar este proceso.</p>
+                                    </li>
+                                    <li><strong>Certificados o Cartas de No Adeudo (Predial y Agua):</strong>
+                                        <p>Ambas constancias **tienen un costo** (derecho de expedición) y certifican que no hay deudas históricas:</p>
+                                        <ul>
+                                            <li><strong>Predial:</strong> Constancia de No Adeudo de Impuesto Predial en la Tesorería de la **Municipalidad**. Se entrega al momento.</li>
+                                            <li><strong>Agua:</strong> Constancia de No Adeudo ante el **organismo operador de agua** (Sistema de Agua) más cercano. Se entrega al momento.</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Recibo de Luz:</strong> Ocasional.</li>
+                                </ul>
 
-                        <p><strong>En resumen:</strong> El **CLG** certifica que la propiedad *está* libre; el **Aviso Preventivo** garantiza que *permanecerá* libre hasta que la escritura esté a su nombre.</p>
+                                <p style="margin-top: 20px;">
+                                    <em>Si su propiedad está en **Régimen de Condominio, tiene Hipoteca, o es un Local/Terreno**, se requiere documentación adicional. Consulte las preguntas específicas sobre esos temas en esta sección de FAQ.</em>
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                </details>
 
-                <details>
-                    <summary>¿Es seguro comprar una propiedad que está en litigio o con un gravamen?</summary>
-                    <div class="respuesta">
-                        **No es recomendable** comprar propiedades con gravámenes o en litigio, ya que pueden generar serios problemas legales y económicos. Siempre se debe solicitar un **Certificado de Libertad de Gravamen** al Registro Público de la Propiedad para verificar que el inmueble está libre de deudas, hipotecas o embargos.
-                    </div>
-                </details>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTen">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                ¿Qué diferencia existe entre el Certificado de Libertad de Gravamen (CLG) y el Aviso Preventivo?
+                            </button>
+                        </h2>
+                        <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionLegal">
+                            <div class="accordion-body">
+                                <p>Ambos documentos son fundamentales en el proceso notarial y tienen objetivos distintos, pero complementarios, para garantizar una compraventa segura:</p>
 
-                <details>
-                    <summary>¿Cómo puedo saber si la propiedad que voy a comprar tiene deudas de servicios o predial?</summary>
-                    <div class="respuesta">
-                        El vendedor debe proveer las **Cartas de No Adeudo** de predial y agua, con una vigencia no mayor a 5 días hábiles a la fecha de firma. El Notario se encargará de solicitar estos documentos y asegurar que el inmueble se entregue libre de toda deuda de servicios.
+                                <h3>Certificado de Libertad de Gravamen (CLG)</h3>
+                                <ul>
+                                    <li><strong>Propósito:</strong> Es una **certificación informativa** emitida por el Registro Público de la Propiedad (RPP).</li>
+                                    <li><strong>Función:</strong> Confirma el **estado legal actual e histórico** de la propiedad. Indica si existen o existieron hipotecas, embargos, o cualquier limitación de dominio registrada (gravámenes).</li>
+                                    <li><strong>Seguridad:</strong> Le da al Notario la certeza de que la propiedad es apta para la venta o de que se conocen las cargas que deben liquidarse.</li>
+                                </ul>
+
+                                <h3>Aviso Preventivo</h3>
+                                <ul>
+                                    <li><strong>Propósito:</strong> Es un **candado legal** que el Notario inscribe de forma temporal en el RPP.</li>
+                                    <li><strong>Función:</strong> **Reserva la prioridad** de la compraventa. Una vez inscrito, ningún tercero puede embargar, gravar, o registrar otra venta sobre la propiedad durante el tiempo que dure la escrituración.</li>
+                                    <li><strong>Seguridad:</strong> Protege al comprador y a la Notaría de cualquier cambio o fraude de último momento. Sin este aviso, la propiedad podría ser afectada mientras se tramita la escritura final.</li>
+                                </ul>
+
+                                <p><strong>En resumen:</strong> El **CLG** certifica que la propiedad <em>está</em> libre; el **Aviso Preventivo** garantiza que <em>permanecerá</em> libre hasta que la escritura esté a su nombre.</p>
+                            </div>
+                        </div>
                     </div>
-                </details>
-                
-                <details>
-                    <summary>¿Es válido un contrato privado de compraventa sin notario?</summary>
-                    <div class="respuesta">
-                        <p><strong>No tiene validez legal completa.</strong> Un contrato privado establece un acuerdo entre particulares, pero para que la propiedad se transfiera de manera legal y quede inscrita a su nombre en el Registro Público de la Propiedad (RPP), es **indispensable la formalización ante un Notario Público** y la elaboración de la Escritura.</p>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingEleven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                                ¿Es seguro comprar una propiedad que está en litigio o con un gravamen?
+                            </button>
+                        </h2>
+                        <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#accordionLegal">
+                            <div class="accordion-body">
+                                <p><strong class="warning-text">No es recomendable</strong> comprar propiedades con gravámenes o en litigio, ya que pueden generar serios problemas legales y económicos. Siempre se debe solicitar un **Certificado de Libertad de Gravamen** al Registro Público de la Propiedad para verificar que el inmueble está libre de deudas, hipotecas o embargos.</p>
+                            </div>
+                        </div>
                     </div>
-                </details>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwelve">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                                ¿Cómo puedo saber si la propiedad que voy a comprar tiene deudas de servicios o predial?
+                            </button>
+                        </h2>
+                        <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve" data-bs-parent="#accordionLegal">
+                            <div class="accordion-body">
+                                <p>El vendedor debe proveer las **Cartas de No Adeudo** de predial y agua, con una vigencia no mayor a 5 días hábiles a la fecha de firma. El Notario se encargará de solicitar estos documentos y asegurar que el inmueble se entregue libre de toda deuda de servicios.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThirteen">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+                                ¿Es válido un contrato privado de compraventa sin notario?
+                            </button>
+                        </h2>
+                        <div id="collapseThirteen" class="accordion-collapse collapse" aria-labelledby="headingThirteen" data-bs-parent="#accordionLegal">
+                            <div class="accordion-body">
+                                <p><strong class="warning-text">No tiene validez legal completa.</strong> Un contrato privado establece un acuerdo entre particulares, pero para que la propiedad se transfiera de manera legal y quede inscrita a su nombre en el Registro Público de la Propiedad (RPP), es **indispensable la formalización ante un Notario Público** y la elaboración de la Escritura.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <p style="text-align: center; margin-top: 30px;">Si su pregunta no está aquí, no dude en contactarnos directamente.</p>
 
             </div>
-            <p style="text-align: center; margin-top: 30px;">Si su pregunta no está aquí, no dude en contactarnos directamente.</p>
-
         </div>
+        <section class="footer-links bg-secondary text-white py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 mb-4 mb-md-0">
+                        <h5 class="text-uppercase fw-bold mb-3">Síguenos</h5>
+                        <div class="social-icons mt-2">
+                        <a href="https://wa.me/522293019294" class="text-white mx-2" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/cMagnaDjesus" class="text-white mx-2" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@propiedades-veracruz_2024" class="text-white mx-2" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@cmagnadj" class="text-white mx-2" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/propiedades_veracruz/" class="text-white mx-2" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-4 mb-md-0">
+                        <h5 class="text-uppercase fw-bold mb-3">Contáctanos</h5>
+                        <p class="text-white mb-2"><i class="fas fa-map-marker-alt me-2"></i> Boca del Río, Ver., México</p>
+                        <p class="text-white mb-2"><i class="fas fa-envelope me-2"></i> cmagnadj@gmail.com</p>
+                        <p class="text-white mb-2"><i class="fas fa-phone me-2"></i> +52 (229) 301 9294</p>
+                        <p class="text-white mb-0"><i class="fas fa-clock me-2"></i> L-D: 8:00 - 17:00 Hrs.</p>
+                    </div>
+
+                    <div class="col-md-3 mb-4 mb-md-0">
+                        <h5 class="text-uppercase fw-bold mb-3">Recursos</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="blog.html" class="text-white text-decoration-none mb-2 d-block">Blog</a></li>
+                            <li><a href="faq.html" class="text-white text-decoration-none mb-2 d-block">Preguntas Frecuentes</a></li>
+                            <li><a href="#" class="text-white text-decoration-none mb-2 d-block">Guía de Compra</a></li>
+                            <li><a href="#" class="text-white text-decoration-none mb-2 d-block">Guía de Venta</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3 mb-4 mb-md-0">
+                        <h5 class="text-uppercase fw-bold mb-3">Legal</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="privacy_policy.html" class="text-white text-decoration-none mb-2 d-block">Aviso de Privacidad</a></li>
+                            <li><a href="#" class="text-white text-decoration-none mb-2 d-block">Términos y Condiciones</a></li>
+                            <li><a href="#" class="text-white text-decoration-none mb-2 d-block">Aviso Legal</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
         
-        <footer class="text-white text-center py-4 mt-5" style="background-color: #004872;">
+        <footer class="text-white text-center py-4" style="background-color: #004872;">
             <div class="container">
                 <p class="mb-0">© 2025 Propiedades Veracruz. Copyright: Created By: cmagna | tel: 2293019294</p>
                 <div class="social-icons mt-2">
@@ -464,9 +578,7 @@
             </div>
         </footer>
  
-
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     </body>
 </html>
