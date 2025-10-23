@@ -1,8 +1,21 @@
 /* Generales */
-*{
+:root {
+    /* Color Azul Marino principal (para consistencia con los otros archivos) */
+    --color-primary: #004872; 
+    /* Color de acento/secundario (Naranja/Dorado) */
+    --color-secondary: #ff9900; 
+}
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+/* Contenedor principal para evitar que el contenido se pegue al navbar fijo */
+.content-wrapper {
+    margin-top: 80px; 
+    padding-bottom: 50px; 
 }
 
 /* Navbar */
@@ -148,12 +161,13 @@ h2{
         margin: 0 auto;
     }
 
+    /* Reglas mejoradas para el Pre-Footer */
     .footer-links .row > div {
         text-align: center;
-        margin-bottom: 2rem !important;
+        margin-bottom: 2rem; 
     }
     .footer-links .row > div:last-child {
-        margin-bottom: 0 !important;
+        margin-bottom: 0;
     }
     .social-icons {
         display: flex;
@@ -200,6 +214,7 @@ h2{
         padding-bottom: 1rem;
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
     }
 
     .mobile-scroll .col {
@@ -220,7 +235,7 @@ h2{
 @media (min-width: 769px) {
     #pcCarousel .carousel-control-prev-icon,
     #pcCarousel .carousel-control-next-icon {
-        background-color: #004872;
+        background-color: var(--color-primary); /* Usando la variable */
         border-radius: 50%;
         padding: 1rem;
     }

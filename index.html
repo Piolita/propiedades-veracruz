@@ -1,48 +1,187 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="es">
+<head>
 
-    <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-WKHK8PCC');</script>
-    <!-- End Google Tag Manager -->
-
-     <!-- Metaetiqueta verificación -->
     <meta name="facebook-domain-verification" content="n2rytl6hcq28xq51tkm5y2flqyrny0" />
 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Propiedades Veracruz</title>
+    <title>Propiedades Veracruz - Tu Hogar Frente al Mar</title>
 
-    
-
-    <!-- Favicon -->
     <link rel="icon" href="img/banners/logo_01.jpg" />
 
-    <!-- Bootstrap 5 jsdeliver-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <!-- Font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css"/>
+    <style>
+      :root {
+          --color-primary: #004872; /* Azul Marino */
+          --color-secondary: #ff9900; /* Naranja/Dorado para acentos */
+          --color-dark: #212529;
+      }
+      
+      .navbar {
+          background-color: var(--color-dark) !important;
+      }
 
-  </head>
+      /* Estilo del Banner de Video */
+      .video-container {
+          position: relative;
+          width: 100%;
+          height: 90vh; /* Altura moderna del hero section */
+          overflow: hidden;
+          margin-top: 56px; /* Ajuste para el navbar fijo */
+      }
+      #miVideoDeFondo {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transform: translate(-50%, -50%);
+          z-index: 0;
+      }
+      .banner-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.4); /* Oscurecer para que el texto se lea mejor */
+          z-index: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          color: white;
+          padding: 20px;
+      }
+      .banner-overlay h1 {
+          font-size: 3rem;
+          font-weight: 700;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .banner-overlay p {
+          font-size: 1.5rem;
+          font-weight: 300;
+          margin-bottom: 2rem;
+      }
+      
+      /* Estilo de la Sección de Búsqueda Rápida */
+      .quick-search {
+          background-color: var(--color-primary);
+          padding: 2rem 0;
+          margin-top: -80px; /* Superponer sobre el video-hero */
+          position: relative;
+          z-index: 10;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .quick-search .form-control, .quick-search .form-select {
+          border-radius: 0.5rem;
+          height: 50px;
+      }
+      .quick-search .btn-secondary {
+          background-color: var(--color-secondary);
+          border-color: var(--color-secondary);
+          color: var(--color-dark);
+          font-weight: bold;
+          height: 50px;
+          transition: background-color 0.3s;
+      }
+      .quick-search .btn-secondary:hover {
+          background-color: #e68a00;
+          border-color: #e68a00;
+      }
+
+      /* Estilo de las Tarjetas de Propiedades */
+      .card {
+          border: none;
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          border-radius: 0.75rem;
+          overflow: hidden;
+      }
+      .card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+      }
+      .card-img-top {
+          height: 200px;
+          object-fit: cover;
+      }
+      .card-body h5 {
+          color: var(--color-primary);
+          font-weight: bold;
+      }
+      .card-body h6 {
+          font-size: 0.95rem;
+          color: var(--color-dark);
+      }
+      .card-body .fa-bed, .fa-bath, .fa-car, .fa-arrows-alt {
+          color: var(--color-secondary);
+          margin-right: 5px;
+      }
+      .card .btn-primary {
+          background-color: var(--color-primary);
+          border-color: var(--color-primary);
+      }
+      
+      /* Estilo de Carrusel Móvil (Scroll Horizontal) */
+      #propiedades-mobile .mobile-scroll {
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+          padding-bottom: 15px; /* Espacio para el scrollbar */
+          gap: 1rem; /* Espacio entre tarjetas */
+          display: flex; /* Asegura el scroll horizontal */
+      }
+      #propiedades-mobile .col {
+          flex: 0 0 80%; /* Ocupa el 80% del ancho para mostrar parte del siguiente */
+          max-width: 80%;
+      }
+      #propiedades-mobile {
+          display: none; /* Ocultar por defecto en PC */
+      }
+      @media (max-width: 767.98px) {
+          #propiedades-pc {
+              display: none !important; /* Ocultar carrusel en móvil */
+          }
+          #propiedades-mobile {
+              display: block; /* Mostrar scroll en móvil */
+          }
+          .banner-overlay h1 {
+              font-size: 2rem;
+          }
+      }
+      
+      /* Estilo del Pre-Footer y Footer */
+      .footer-links {
+          background-color: var(--color-dark) !important;
+          color: white;
+      }
+      .footer-links h5 {
+          color: var(--color-secondary); /* Color acento en títulos del footer */
+      }
+      .footer-links a:hover {
+          color: var(--color-secondary) !important;
+      }
+      
+    </style>
+</head>
 
 
-  <body>
+<body>
 
-    <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKHK8PCC"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
-    <!-- Navbar -->
     <div class="container-navbar">
       <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
@@ -52,8 +191,10 @@
               alt="logo"
               width="30"
               height="30"
-              class="d-inline-block align-top"/>
-                Propiedades-Veracruz</a>
+              class="d-inline-block align-top me-2"
+            />
+            Propiedades-Veracruz
+          </a>
             <button
               class="navbar-toggler"
               type="button"
@@ -61,16 +202,17 @@
               data-bs-target="#navbarNavAltMarkup"
               aria-controls="navbarNavAltMarkup"
               aria-expanded="false"
-              aria-label="Toggle navigation">
+              aria-label="Toggle navigation"
+            >
               <span class="navbar-toggler-icon"></span>
             </button>
 
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link text-white" href="boca.html">Boca del Rio</a>
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link text-white" href="boca.html">Boca del Río</a>
               <a class="nav-link text-white" href="veracruz.html">Veracruz</a>
               <a class="nav-link text-white" href="riviera.html">Riviera Veracruzana</a>
-              <a class="nav-link text-white" href="medellin.html">Medellin de Bravo</a>
+              <a class="nav-link text-white" href="medellin.html">Medellín de Bravo</a>
               <a class="nav-link text-white" href="tips.html">Tips Inmobiliarios</a>
             </div>
           </div>
@@ -79,31 +221,42 @@
     </div>
 
 
-    <!-- Video -->
     <div class="video-container">
       <video autoplay muted loop id="miVideoDeFondo">
         <source src="img/videos/playas_mocambo.mp4" type="video/mp4">
       </video>
-      <div class="banner-text position-absolute bottom-0 start-50 translate-middle-x">
-        <h1>P R O P I E D A D E S  -  V E R A C R U Z</h1>
+      <div class="banner-overlay">
+        <h1 class="display-3 fw-bold">Encuentra tu próximo hogar en <span style="color: var(--color-secondary);">Veracruz</span></h1>
+        <p class="lead d-none d-md-block">Asesoría seria, directa y legal para tu inversión inmobiliaria.</p>
+        <a href="#propiedades-pc" class="btn btn-lg btn-secondary text-white fw-bold mt-3" style="background-color: var(--color-secondary); border-color: var(--color-secondary); color: var(--color-dark) !important;">
+          Ver Propiedades Destacadas
+        </a>
       </div>
     </div>
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prueba de Carrusel de Propiedades</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
-</head>
-<body>
+    <section class="quick-search">
+        <div class="container">
+            <form class="row g-3 align-items-center justify-content-center" action="#" method="GET" id="searchForm">
+                <div class="col-12 col-md-6">
+                    <select class="form-select" aria-label="Ubicación" id="locationSelect">
+                        <option selected value="">Selecciona la zona que te interesa...</option>
+                        <option value="boca.html">Boca del Río</option>
+                        <option value="veracruz.html">Veracruz Puerto</option>
+                        <option value="riviera.html">Riviera Veracruzana</option>
+                        <option value="medellin.html">Medellín de Bravo</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-3">
+                    <button type="submit" class="btn btn-secondary w-100"><i class="fas fa-arrow-right me-2"></i>Ir a la Zona</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
     
     <section id="propiedades-pc" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text mb-5 fw-bold text-primary">Echa un vistazo a estas recomendaciones</h2>
+            <h2 class="mb-5 fw-bold text-center" style="color: var(--color-primary);">Echa un vistazo a estas **oportunidades**</h2>
             <div id="pcCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -114,10 +267,14 @@
                                     <div class="card-body">
                                         <h5 class="card-title">El Morro</h5>
                                         <h6>Boca del Río, Ver.</h6>
-                                        <h6>3 <i class="fas fa-bed"></i> 3.5 <i class="fas fa-bath"></i> 1 <i class="fas fa-car"></i> </h6>
-                                        <h6><i class="fa fa-arrows-alt"> 100 m2 t / 155 m2 c </i></h6>
-                                        <h6>$2,550,000</h6>
-                                        <a href="https://www.youtube.com/watch?v=mIgRKkRwj7o" target="_blank" class="btn btn-primary">Ver en YouTube</a>
+                                        <h6 class="text-muted small">
+                                            3 <i class="fas fa-bed"></i> | 3.5 <i class="fas fa-bath"></i> | 1 <i class="fas fa-car"></i>
+                                        </h6>
+                                        <h6 class="text-muted small">
+                                            <i class="fa fa-arrows-alt me-1"></i> 100 m² T / 155 m² C
+                                        </h6>
+                                        <h5 class="fw-bold text-success mt-3">$2,550,000</h5>
+                                        <a href="https://www.youtube.com/watch?v=mIgRKkRwj7o" target="_blank" class="btn btn-primary w-100">Ver Video <i class="fab fa-youtube ms-2"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -127,10 +284,14 @@
                                     <div class="card-body">
                                         <h5 class="card-title">El Morro</h5>
                                         <h6>Boca del Río, Ver.</h6>
-                                        <h6>3 <i class="fas fa-bed"></i> 3.5 <i class="fas fa-bath"></i> 2 <i class="fas fa-car"></i> </h6>
-                                        <h6><i class="fa fa-arrows-alt"> 140 m2 t / 185 m2 c </i></h6>
-                                        <h6>$3,150,000</h6>
-                                        <a href="https://www.youtube.com/watch?v=-TKAe52Bzv4" target="_blank" class="btn btn-primary">Ver en YouTube</a>
+                                        <h6 class="text-muted small">
+                                            3 <i class="fas fa-bed"></i> | 3.5 <i class="fas fa-bath"></i> | 2 <i class="fas fa-car"></i>
+                                        </h6>
+                                        <h6 class="text-muted small">
+                                            <i class="fa fa-arrows-alt me-1"></i> 140 m² T / 185 m² C
+                                        </h6>
+                                        <h5 class="fw-bold text-success mt-3">$3,150,000</h5>
+                                        <a href="https://www.youtube.com/watch?v=-TKAe52Bzv4" target="_blank" class="btn btn-primary w-100">Ver Video <i class="fab fa-youtube ms-2"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -140,16 +301,20 @@
                                     <div class="card-body">
                                         <h5 class="card-title">Col. Villa Rica</h5>
                                         <h6>Boca del Río, Ver.</h6>
-                                        <h6>43<i class="fas fa-bed"></i> 3 <i class="fas fa-bath"></i> 1 <i class="fas fa-car"></i> </h6>
-                                        <h6><i class="fa fa-arrows-alt"> 112.5 m2 t / 160.18 m2 c</i></h6>
-                                        <h6>$ 2,690,000</h6>
-                                        <a href="https://www.youtube.com/watch?v=OlJpIRX9-jo" target="_blank" class="btn btn-primary">Ver en YouTube</a>
+                                        <h6 class="text-muted small">
+                                            4 <i class="fas fa-bed"></i> | 3 <i class="fas fa-bath"></i> | 1 <i class="fas fa-car"></i>
+                                        </h6>
+                                        <h6 class="text-muted small">
+                                            <i class="fa fa-arrows-alt me-1"></i> 112.5 m² T / 160.18 m² C
+                                        </h6>
+                                        <h5 class="fw-bold text-success mt-3">$2,690,000</h5>
+                                        <a href="https://www.youtube.com/watch?v=OlJpIRX9-jo" target="_blank" class="btn btn-primary w-100">Ver Video <i class="fab fa-youtube ms-2"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-    
+        
                     <div class="carousel-item">
                         <div class="row row-cols-1 row-cols-md-3 g-4">
                             <div class="col">
@@ -158,10 +323,14 @@
                                     <div class="card-body">
                                         <h5 class="card-title">Torre Playa Marina</h5>
                                         <h6>Riviera Veracruzana, Ver</h6>
-                                        <h6>3 <i class="fas fa-bed"></i> 3 <i class="fas fa-bath"></i> 3 <i class="fas fa-car"></i> </h6>
-                                        <h6><i class="fa fa-arrows-alt"> 230 m2  Piso 15</i></h6>
-                                        <h6>$7,500,000</h6>
-                                        <a href="https://www.youtube.com/watch?v=SmNK0ERG2pQ" target="_blank" class="btn btn-primary">Ver en YouTube</a>
+                                        <h6 class="text-muted small">
+                                            3 <i class="fas fa-bed"></i> | 3 <i class="fas fa-bath"></i> | 3 <i class="fas fa-car"></i>
+                                        </h6>
+                                        <h6 class="text-muted small">
+                                            <i class="fa fa-arrows-alt me-1"></i> 230 m² Piso 15
+                                        </h6>
+                                        <h5 class="fw-bold text-success mt-3">$7,500,000</h5>
+                                        <a href="https://www.youtube.com/watch?v=SmNK0ERG2pQ" target="_blank" class="btn btn-primary w-100">Ver Video <i class="fab fa-youtube ms-2"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -171,10 +340,14 @@
                                     <div class="card-body">
                                         <h5 class="card-title">Playas del Conchal</h5>
                                         <h6>Riviera Veracruzana, Ver.</h6>
-                                        <h6>3 <i class="fas fa-bed"></i> 4.5 <i class="fas fa-bath"></i> 2 <i class="fas fa-car"></i> </h6>
-                                        <h6><i class="fa fa-arrows-alt"> 233 m2 t / 230 m2 c </i></h6>
-                                        <h6>$5,150,000</h6>
-                                        <a href="https://www.youtube.com/shorts/aFtto0wgANw" target="_blank" class="btn btn-primary">Ver en YouTube</a>
+                                        <h6 class="text-muted small">
+                                            3 <i class="fas fa-bed"></i> | 4.5 <i class="fas fa-bath"></i> | 2 <i class="fas fa-car"></i>
+                                        </h6>
+                                        <h6 class="text-muted small">
+                                            <i class="fa fa-arrows-alt me-1"></i> 233 m² T / 230 m² C
+                                        </h6>
+                                        <h5 class="fw-bold text-success mt-3">$5,150,000</h5>
+                                        <a href="https://www.youtube.com/shorts/aFtto0wgANw" target="_blank" class="btn btn-primary w-100">Ver Video <i class="fab fa-youtube ms-2"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -184,10 +357,14 @@
                                     <div class="card-body">
                                         <h5 class="card-title">La Noria</h5>
                                         <h6>Granjas la Noria, Ver</h6>
-                                        <h6>54<i class="fas fa-bed"></i> 3.5 <i class="fas fa-bath"></i> 2 <i class="fas fa-car"></i> </h6>
-                                        <h6><i class="fa fa-arrows-alt"> 200 m2 t /  259 m2 c </i></h6>
-                                        <h6>$3,500,000</h6>
-                                        <a href="https://www.youtube.com/watch?v=fQ-HXHNUqFw" target="_blank" class="btn btn-primary">Ver en YouTube</a>
+                                        <h6 class="text-muted small">
+                                            5 <i class="fas fa-bed"></i> | 3.5 <i class="fas fa-bath"></i> | 2 <i class="fas fa-car"></i>
+                                        </h6>
+                                        <h6 class="text-muted small">
+                                            <i class="fa fa-arrows-alt me-1"></i> 200 m² T / 259 m² C
+                                        </h6>
+                                        <h5 class="fw-bold text-success mt-3">$3,500,000</h5>
+                                        <a href="https://www.youtube.com/watch?v=fQ-HXHNUqFw" target="_blank" class="btn btn-primary w-100">Ver Video <i class="fab fa-youtube ms-2"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -196,11 +373,11 @@
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#pcCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
+                    <span class="visually-hidden">Anterior</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#pcCarousel" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
+                    <span class="visually-hidden">Siguiente</span>
                 </button>
             </div>
         </div>
@@ -208,18 +385,22 @@
     
     <section id="propiedades-mobile" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text mb-5 fw-bold text-primary">Echa un vistazo a estas recomendaciones</h2>
-            <div class="mobile-scroll d-flex flex-nowrap">
+            <h2 class="mb-5 fw-bold text-center" style="color: var(--color-primary);">Oportunidades Destacadas</h2>
+            <div class="mobile-scroll">
                 <div class="col">
                     <div class="card h-100">
                         <img src="img/boca/casas/Morro_esquina_0.0.jpg" class="card-img-top" alt="El Morro omar">
                         <div class="card-body">
                             <h5 class="card-title">El Morro</h5>
                             <h6>Boca del Río, Ver.</h6>
-                            <h6>3 <i class="fas fa-bed"></i> 3.5 <i class="fas fa-bath"></i> 1 <i class="fas fa-car"></i> </h6>
-                            <h6><i class="fa fa-arrows-alt"> 100 m2 t / 155 m2 c </i></h6>
-                            <h6>$2,550,000</h6>
-                            <a href="https://www.youtube.com/watch?v=mIgRKkRwj7o" target="_blank" class="btn btn-primary">Ver en YouTube</a>
+                            <h6 class="text-muted small">
+                                3 <i class="fas fa-bed"></i> | 3.5 <i class="fas fa-bath"></i> | 1 <i class="fas fa-car"></i>
+                            </h6>
+                            <h6 class="text-muted small">
+                                <i class="fa fa-arrows-alt me-1"></i> 100 m² T / 155 m² C
+                            </h6>
+                            <h5 class="fw-bold text-success mt-3">$2,550,000</h5>
+                            <a href="https://www.youtube.com/watch?v=mIgRKkRwj7o" target="_blank" class="btn btn-primary w-100">Ver Video <i class="fab fa-youtube ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -229,10 +410,14 @@
                         <div class="card-body">
                             <h5 class="card-title">El Morro</h5>
                             <h6>Boca del Río, Ver.</h6>
-                            <h6>3 <i class="fas fa-bed"></i> 3.5 <i class="fas fa-bath"></i> 2 <i class="fas fa-car"></i> </h6>
-                            <h6><i class="fa fa-arrows-alt"> 140 m2 t / 185 m2 c </i></h6>
-                            <h6>$3,150,000</h6>
-                            <a href="https://www.youtube.com/watch?v=-TKAe52Bzv4" target="_blank" class="btn btn-primary">Ver en YouTube</a>
+                            <h6 class="text-muted small">
+                                3 <i class="fas fa-bed"></i> | 3.5 <i class="fas fa-bath"></i> | 2 <i class="fas fa-car"></i>
+                            </h6>
+                            <h6 class="text-muted small">
+                                <i class="fa fa-arrows-alt me-1"></i> 140 m² T / 185 m² C
+                            </h6>
+                            <h5 class="fw-bold text-success mt-3">$3,150,000</h5>
+                            <a href="https://www.youtube.com/watch?v=-TKAe52Bzv4" target="_blank" class="btn btn-primary w-100">Ver Video <i class="fab fa-youtube ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -242,10 +427,14 @@
                         <div class="card-body">
                             <h5 class="card-title">Col. Villa Rica</h5>
                             <h6>Boca del Río, Ver.</h6>
-                            <h6>43<i class="fas fa-bed"></i> 3 <i class="fas fa-bath"></i> 1 <i class="fas fa-car"></i> </h6>
-                            <h6><i class="fa fa-arrows-alt"> 112.5 m2 t / 160.18 m2 c</i></h6>
-                            <h6>$ 2,690,000</h6>
-                            <a href="https://www.youtube.com/watch?v=OlJpIRX9-jo" target="_blank" class="btn btn-primary">Ver en YouTube</a>
+                            <h6 class="text-muted small">
+                                4 <i class="fas fa-bed"></i> | 3 <i class="fas fa-bath"></i> | 1 <i class="fas fa-car"></i>
+                            </h6>
+                            <h6 class="text-muted small">
+                                <i class="fa fa-arrows-alt me-1"></i> 112.5 m² T / 160.18 m² C
+                            </h6>
+                            <h5 class="fw-bold text-success mt-3">$2,690,000</h5>
+                            <a href="https://www.youtube.com/watch?v=OlJpIRX9-jo" target="_blank" class="btn btn-primary w-100">Ver Video <i class="fab fa-youtube ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -255,10 +444,14 @@
                         <div class="card-body">
                             <h5 class="card-title">Torre Playa Marina</h5>
                             <h6>Riviera Veracruzana, Ver</h6>
-                            <h6>3 <i class="fas fa-bed"></i> 3 <i class="fas fa-bath"></i> 3 <i class="fas fa-car"></i> </h6>
-                            <h6><i class="fa fa-arrows-alt"> 230 m2  Piso 15</i></h6>
-                            <h6>$7,500,000</h6>
-                            <a href="https://www.youtube.com/watch?v=SmNK0ERG2pQ" target="_blank" class="btn btn-primary">Ver en YouTube</a>
+                            <h6 class="text-muted small">
+                                3 <i class="fas fa-bed"></i> | 3 <i class="fas fa-bath"></i> | 3 <i class="fas fa-car"></i>
+                            </h6>
+                            <h6 class="text-muted small">
+                                <i class="fa fa-arrows-alt me-1"></i> 230 m² Piso 15
+                            </h6>
+                            <h5 class="fw-bold text-success mt-3">$7,500,000</h5>
+                            <a href="https://www.youtube.com/watch?v=SmNK0ERG2pQ" target="_blank" class="btn btn-primary w-100">Ver Video <i class="fab fa-youtube ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -268,10 +461,14 @@
                         <div class="card-body">
                             <h5 class="card-title">Playas del Conchal</h5>
                             <h6>Riviera Veracruzana, Ver.</h6>
-                            <h6>3 <i class="fas fa-bed"></i> 4.5 <i class="fas fa-bath"></i> 2 <i class="fas fa-car"></i> </h6>
-                            <h6><i class="fa fa-arrows-alt"> 233 m2 t / 230 m2 c </i></h6>
-                            <h6>$5,150,000</h6>
-                            <a href="https://www.youtube.com/watch?v=uQRUq5K0VUE" target="_blank" class="btn btn-primary">Ver en YouTube</a>
+                            <h6 class="text-muted small">
+                                3 <i class="fas fa-bed"></i> | 4.5 <i class="fas fa-bath"></i> | 2 <i class="fas fa-car"></i>
+                            </h6>
+                            <h6 class="text-muted small">
+                                <i class="fa fa-arrows-alt me-1"></i> 233 m² T / 230 m² C
+                            </h6>
+                            <h5 class="fw-bold text-success mt-3">$5,150,000</h5>
+                            <a href="https://www.youtube.com/shorts/aFtto0wgANw" target="_blank" class="btn btn-primary w-100">Ver Video <i class="fab fa-youtube ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -281,10 +478,14 @@
                         <div class="card-body">
                             <h5 class="card-title">La Noria</h5>
                             <h6>Granjas la Noria, Ver</h6>
-                            <h6>54<i class="fas fa-bed"></i> 3.5 <i class="fas fa-bath"></i> 2 <i class="fas fa-car"></i> </h6>
-                            <h6><i class="fa fa-arrows-alt"> 200 m2 t /  259 m2 c </i></h6>
-                            <h6>$3,500,000</h6>
-                            <a href="https://www.youtube.com/watch?v=fQ-HXHNUqFw" target="_blank" class="btn btn-primary">Ver en YouTube</a>
+                            <h6 class="text-muted small">
+                                5 <i class="fas fa-bed"></i> | 3.5 <i class="fas fa-bath"></i> | 2 <i class="fas fa-car"></i>
+                            </h6>
+                            <h6 class="text-muted small">
+                                <i class="fa fa-arrows-alt me-1"></i> 200 m² T / 259 m² C
+                            </h6>
+                            <h5 class="fw-bold text-success mt-3">$3,500,000</h5>
+                            <a href="https://www.youtube.com/watch?v=fQ-HXHNUqFw" target="_blank" class="btn btn-primary w-100">Ver Video <i class="fab fa-youtube ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -292,27 +493,13 @@
         </div>
     </section>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script>
-      const pcCarousel = document.querySelector('#pcCarousel');
-      if (pcCarousel) {
-        new bootstrap.Carousel(pcCarousel, {
-          interval: 5000,
-          wrap: true
-        });
-      }
-    </script>
-
-</body>
-</html>
-
-    <!-- prefooter -->
-    <section class="footer-links bg-secondary text-white py-5">
+    
+    <section class="footer-links py-5">
       <div class="container">
         <div class="row">
           <div class="col-md-3 mb-4 mb-md-0">
             <h5 class="text-uppercase fw-bold mb-3">Síguenos</h5>
-            <div class="social-icons mt-2">
+            <div class="social-icons mt-2 fs-3">
               <a href="https://wa.me/522293019294" class="text-white mx-2" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
               <a href="https://www.facebook.com/cMagnaDjesus" class="text-white mx-2" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
               <a href="https://www.youtube.com/@propiedades-veracruz_2024" class="text-white mx-2" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
@@ -323,16 +510,16 @@
 
           <div class="col-md-3 mb-4 mb-md-0">
               <h5 class="text-uppercase fw-bold mb-3">Contáctanos</h5>
-              <p class="text-white mb-2"><i class="fas fa-map-marker-alt me-2"></i> Boca del Río, Ver., México</p>
-              <p class="text-white mb-2"><i class="fas fa-envelope me-2"></i> cmagnadj@gmail.com</p>
-              <p class="text-white mb-2"><i class="fas fa-phone me-2"></i> +52 (229) 301 9294</p>
-              <p class="text-white mb-0"><i class="fas fa-clock me-2"></i> L-D: 8:00 - 17:00 Hrs.</p>
+              <p class="text-white mb-2"><i class="fas fa-map-marker-alt me-2" style="color: var(--color-secondary);"></i> Boca del Río, Ver., México</p>
+              <p class="text-white mb-2"><i class="fas fa-envelope me-2" style="color: var(--color-secondary);"></i> cmagnadj@gmail.com</p>
+              <p class="text-white mb-2"><i class="fas fa-phone me-2" style="color: var(--color-secondary);"></i> +52 (229) 301 9294</p>
+              <p class="text-white mb-0"><i class="fas fa-clock me-2" style="color: var(--color-secondary);"></i> L-D: 8:00 - 17:00 Hrs.</p>
           </div>
 
           <div class="col-md-3 mb-4 mb-md-0">
               <h5 class="text-uppercase fw-bold mb-3">Recursos</h5>
               <ul class="list-unstyled">
-                  <li><a href="#" class="text-white text-decoration-none mb-2 d-block">Blog</a></li>
+                  <li><a href="tips.html" class="text-white text-decoration-none mb-2 d-block">Blog Inmobiliario</a></li>
                   <li><a href="faq.html" class="text-white text-decoration-none mb-2 d-block">Preguntas Frecuentes</a></li>
                   <li><a href="#" class="text-white text-decoration-none mb-2 d-block">Guía de Compra</a></li>
                   <li><a href="#" class="text-white text-decoration-none mb-2 d-block">Guía de Venta</a></li>
@@ -352,22 +539,49 @@
     </section>
 
 
-    <!-- Footer -->
-    <footer class="text-white text-center py-4 mt-5" style="background-color: #004872;">
+    <footer class="text-white text-center py-3" style="background-color: var(--color-primary);">
       <div class="container">
-          <p class="mb-0">© 2025 Propiedades Veracruz. Copyright: Created By: cmagna | tel: 2293019294</p>
+          <p class="mb-0 small">© 2025 Propiedades Veracruz. Creado por: cmagna | Tel: 2293019294</p>
       </div>
     </footer>
 
 
-
-
-    <!-- Bootstrap jsdeliver -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-    <!-- Archivo JS para inicializar el carrusel -->
-    <script src="carrusel.js"></script>
+    <script>
+      // 1. Inicialización del carrusel para PC
+      const pcCarousel = document.querySelector('#pcCarousel');
+      if (pcCarousel) {
+        // Inicialización con intervalo de 5 segundos
+        new bootstrap.Carousel(pcCarousel, {
+          interval: 5000,
+          wrap: true
+        });
+      }
+      
+      // 2. Lógica de Redirección para el Formulario Estático de Búsqueda Rápida
+      document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('searchForm');
+        const select = document.getElementById('locationSelect');
+
+        if (form && select) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault(); // Detiene el envío normal del formulario
+
+                const selectedValue = select.value;
+                
+                if (selectedValue) {
+                    // Redirige al usuario a la URL seleccionada (ej: boca.html)
+                    window.location.href = selectedValue;
+                } else {
+                    // Opcional: Alerta si el usuario no selecciona nada
+                    alert("Por favor, selecciona una zona para iniciar la búsqueda.");
+                }
+            });
+        }
+      });
+    </script>
   
 
-  </body>
+</body>
 </html>
