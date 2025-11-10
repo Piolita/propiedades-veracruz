@@ -31,7 +31,7 @@
           background-color: var(--color-dark) !important;
       }
 
-      /* Estilo del Banner de Video */
+      /* Estilo del Banner de Video (Hero Section) */
       .video-container {
           position: relative;
           width: 100%;
@@ -114,10 +114,24 @@
           transform: translateY(-5px);
           box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
       }
+      
+      /* CORRECCIÓN #1 y #2: Asegurar que video/imagen cubra la tarjeta */
       .card-img-top {
+          /* AÑADIDO PARA LA CORRECCIÓN DE VIDEO */
+          width: 100%; 
+          display: block; 
+          /* FIN DE CORRECCIÓN */
           height: 200px;
           object-fit: cover;
       }
+      /* CORRECCIÓN #3: Solución de fallback forzando altura para videos en las cards */
+      .card-img-top-video {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+          display: block;
+      }
+
       .card-body h5 {
           color: var(--color-primary);
           font-weight: bold;
@@ -141,7 +155,8 @@
           -webkit-overflow-scrolling: touch;
           padding-bottom: 15px; /* Espacio para el scrollbar */
           gap: 1rem; /* Espacio entre tarjetas */
-          display: flex; /* Asegura el scroll horizontal */
+          display: flex; 
+          align-items: flex-start; /* Evita que las cards se estiren y creen espacio blanco */
       }
       #propiedades-mobile .col {
           flex: 0 0 80%; /* Ocupa el 80% del ancho para mostrar parte del siguiente */
@@ -220,7 +235,6 @@
       </nav>
     </div>
 
-
     <div class="video-container">
       <video autoplay muted loop id="miVideoDeFondo">
         <source src="img/videos/playas_mocambo.mp4" type="video/mp4">
@@ -263,13 +277,13 @@
                         <div class="row row-cols-1 row-cols-md-3 g-4">
                             <div class="col">
                                 <div class="card h-100">
-                                    <video class="card-img-top" 
+                                    <video class="card-img-top-video" 
                                         autoplay 
                                         loop 
                                         muted 
                                         playsinline 
                                         src="img/videos/boca/casas/morro omar 5s.mp4" 
-                                        alt="Terra">
+                                        alt="morro omar">
                                     </video>
                                     <div class="card-body">
                                         <h5 class="card-title">El Morro</h5>
@@ -288,13 +302,13 @@
                             </div>
                             <div class="col">
                                 <div class="card h-100">
-                                    <video class="card-img-top" 
+                                    <video class="card-img-top-video" 
                                         autoplay 
                                         loop 
                                         muted 
                                         playsinline 
                                         src="img/videos/veracruz/deptos/genova 5s.mp4" 
-                                        alt="Terra">
+                                        alt="Genova">
                                     </video>
                                     <div class="card-body">
                                         <h5 class="card-title">Genova Col. I Zaragoza preventa</h5>
@@ -313,13 +327,13 @@
                             </div>
                             <div class="col">
                                 <div class="card h-100">
-                                    <video class="card-img-top" 
+                                    <video class="card-img-top-video" 
                                         autoplay 
                                         loop 
                                         muted 
                                         playsinline 
                                         src="img/videos/veracruz/deptos/genesis 5s.mp4" 
-                                        alt="Terra">
+                                        alt="genesis">
                                     </video>
                                     <div class="card-body">
                                         <h5 class="card-title">Genesis Zona Centro preventa</h5>
@@ -406,14 +420,21 @@
             </div>
         </div>
     </section>
-    
+
     <section id="propiedades-mobile" class="py-5 bg-light">
         <div class="container">
             <h2 class="mb-5 fw-bold text-center" style="color: var(--color-primary);">Oportunidades Destacadas</h2>
             <div class="mobile-scroll">
                 <div class="col">
-                    <div class="card h-100">
-                        <img src="img/boca/casas/Morro_esquina_0.0.jpg" class="card-img-top" alt="El Morro omar">
+                    <div class="card">
+                        <video class="card-img-top-video" 
+                            autoplay 
+                            loop 
+                            muted 
+                            playsinline 
+                            src="img/videos/boca/casas/morro omar 5s.mp4" 
+                            alt="morro omar">
+                        </video>
                         <div class="card-body">
                             <h5 class="card-title">El Morro</h5>
                             <h6>Boca del Río, Ver.</h6>
@@ -429,27 +450,41 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100">
-                        <img src="img/boca/casas/arqPichardo_1.jpg" class="card-img-top" alt="El Morro Pichardo">
+                    <div class="card">
+                        <video class="card-img-top-video" 
+                            autoplay 
+                            loop 
+                            muted 
+                            playsinline 
+                            src="img/videos/veracruz/deptos/genova 5s.mp4" 
+                            alt="Genova">
+                        </video>
                         <div class="card-body">
-                            <h5 class="card-title">El Morro</h5>
-                            <h6>Boca del Río, Ver.</h6>
+                            <h5 class="card-title">Genova preventa</h5>
+                            <h6>Veracruz, Ver.</h6>
                             <h6 class="text-muted small">
-                                3 <i class="fas fa-bed"></i> | 3.5 <i class="fas fa-bath"></i> | 2 <i class="fas fa-car"></i>
+                                2 <i class="fas fa-bed"></i> | 2 <i class="fas fa-bath"></i> | 1 <i class="fas fa-car"></i>
                             </h6>
                             <h6 class="text-muted small">
-                                <i class="fa fa-arrows-alt me-1"></i> 140 m² T / 185 m² C
+                                <i class="fa fa-arrows-alt me-1"></i> 65 m2 + 1 estacionamiento
                             </h6>
-                            <h5 class="fw-bold text-success mt-3">$3,150,000</h5>
-                            <a href="https://www.youtube.com/watch?v=-TKAe52Bzv4" target="_blank" class="btn btn-primary w-100">Ver Video <i class="fab fa-youtube ms-2"></i></a>
+                            <h5 class="fw-bold text-success mt-3">$2,150,000</h5>
+                            <a href="x" target="_blank" class="btn btn-primary w-100">Ver Video <i class="fab fa-youtube ms-2"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100">
-                        <img src="img/veracruz/deptos/genesis_1.png" class="card-img-top" alt="Genesis">
+                    <div class="card">
+                        <video class="card-img-top-video" 
+                            autoplay 
+                            loop 
+                            muted 
+                            playsinline 
+                            src="img/videos/veracruz/deptos/genesis 5s.mp4" 
+                            alt="genesis">
+                        </video>
                         <div class="card-body">
-                            <h5 class="card-title">Alacio Peréz Centro preventa</h5>
+                            <h5 class="card-title">Genesis Zona Centro preventa</h5>
                             <h6>Veracruz Puerto</h6>
                             <h6 class="text-muted small">
                                 2 <i class="fas fa-bed"></i> | 2 <i class="fas fa-bath"></i> | 1 <i class="fas fa-car"></i>
@@ -457,13 +492,13 @@
                             <h6 class="text-muted small">
                                 <i class="fa fa-arrows-alt me-1"></i> 70 m2
                             </h6>
-                            <h5 class="fw-bold text-success mt-3">$1,890,000</h5>
+                            <h5 class="fw-bold text-success mt-3">$1,980,000</h5>
                             <a href="x" target="_blank" class="btn btn-primary w-100">Ver Video <i class="fab fa-youtube ms-2"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100">
+                    <div class="card">
                         <img src="img/riviera/deptos/ame_PlayaMarina_0.jpg" class="card-img-top" alt="Playa Marina">
                         <div class="card-body">
                             <h5 class="card-title">Torre Playa Marina</h5>
@@ -480,7 +515,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100">
+                    <div class="card">
                         <img src="img/riviera/casas/paseoLomas.jpg" class="card-img-top" alt="Playas del Conchal">
                         <div class="card-body">
                             <h5 class="card-title">Playas del Conchal</h5>
@@ -497,7 +532,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100">
+                    <div class="card">
                         <img src="img/veracruz/casas/LaNoria_1.jpg" class="card-img-top" alt="La Noria">
                         <div class="card-body">
                             <h5 class="card-title">La Noria</h5>
