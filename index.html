@@ -115,16 +115,12 @@
           box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
       }
       
-      /* CORRECCIÓN #1 y #2: Asegurar que video/imagen cubra la tarjeta */
+      /* CLASE PARA IMÁGENES (No Videos) */
       .card-img-top {
-          /* AÑADIDO PARA LA CORRECCIÓN DE VIDEO */
-          width: 100%; 
-          display: block; 
-          /* FIN DE CORRECCIÓN */
           height: 200px;
           object-fit: cover;
       }
-      /* CORRECCIÓN #3: Solución de fallback forzando altura para videos en las cards */
+      /* CLASE CORREGIDA Y EXCLUSIVA PARA VIDEOS */
       .card-img-top-video {
           width: 100%;
           height: 200px;
@@ -156,7 +152,7 @@
           padding-bottom: 15px; /* Espacio para el scrollbar */
           gap: 1rem; /* Espacio entre tarjetas */
           display: flex; 
-          align-items: flex-start; /* Evita que las cards se estiren y creen espacio blanco */
+          align-items: flex-start; /* CORRECCIÓN PARA EVITAR EL ESPACIO BLANCO INFERIOR */
       }
       #propiedades-mobile .col {
           flex: 0 0 80%; /* Ocupa el 80% del ancho para mostrar parte del siguiente */
@@ -357,7 +353,14 @@
                         <div class="row row-cols-1 row-cols-md-3 g-4">
                             <div class="col">
                                 <div class="card h-100">
-                                    <img src="img/riviera/deptos/ame_PlayaMarina_0.jpg" class="card-img-top" alt="Playa Marina">
+                                    <video class="card-img-top-video" 
+                                        autoplay 
+                                        loop 
+                                        muted 
+                                        playsinline 
+                                        src="img/videos/boca/casas/morro omar 5s.mp4" 
+                                        alt="Playa Marina">
+                                    </video>
                                     <div class="card-body">
                                         <h5 class="card-title">Torre Playa Marina</h5>
                                         <h6>Riviera Veracruzana, Ver</h6>
@@ -374,7 +377,14 @@
                             </div>
                             <div class="col">
                                 <div class="card h-100">
-                                    <img src="img/riviera/casas/paseoLomas.jpg" class="card-img-top" alt="Playas del Conchal">
+                                    <video class="card-img-top-video" 
+                                        autoplay 
+                                        loop 
+                                        muted 
+                                        playsinline 
+                                        src="img/videos/boca/casas/morro omar 5s.mp4" 
+                                        alt="Playas del Conchal">
+                                    </video>
                                     <div class="card-body">
                                         <h5 class="card-title">Playas del Conchal</h5>
                                         <h6>Riviera Veracruzana, Ver.</h6>
@@ -391,7 +401,14 @@
                             </div>
                             <div class="col">
                                 <div class="card h-100">
-                                    <img src="img/veracruz/casas/LaNoria_1.jpg" class="card-img-top" alt="La Noria">
+                                    <video class="card-img-top-video" 
+                                        autoplay 
+                                        loop 
+                                        muted 
+                                        playsinline 
+                                        src="img/videos/boca/casas/morro omar 5s.mp4" 
+                                        alt="La Noria">
+                                    </video>
                                     <div class="card-body">
                                         <h5 class="card-title">La Noria</h5>
                                         <h6>Granjas la Noria, Ver</h6>
@@ -499,7 +516,14 @@
                 </div>
                 <div class="col">
                     <div class="card">
-                        <img src="img/riviera/deptos/ame_PlayaMarina_0.jpg" class="card-img-top" alt="Playa Marina">
+                        <video class="card-img-top-video" 
+                            autoplay 
+                            loop 
+                            muted 
+                            playsinline 
+                            src="img/videos/boca/casas/morro omar 5s.mp4" 
+                            alt="Playa Marina">
+                        </video>
                         <div class="card-body">
                             <h5 class="card-title">Torre Playa Marina</h5>
                             <h6>Riviera Veracruzana, Ver</h6>
@@ -516,7 +540,14 @@
                 </div>
                 <div class="col">
                     <div class="card">
-                        <img src="img/riviera/casas/paseoLomas.jpg" class="card-img-top" alt="Playas del Conchal">
+                        <video class="card-img-top-video" 
+                            autoplay 
+                            loop 
+                            muted 
+                            playsinline 
+                            src="img/videos/boca/casas/morro omar 5s.mp4" 
+                            alt="Playas del Conchal">
+                        </video>
                         <div class="card-body">
                             <h5 class="card-title">Playas del Conchal</h5>
                             <h6>Riviera Veracruzana, Ver.</h6>
@@ -533,7 +564,14 @@
                 </div>
                 <div class="col">
                     <div class="card">
-                        <img src="img/veracruz/casas/LaNoria_1.jpg" class="card-img-top" alt="La Noria">
+                        <video class="card-img-top-video" 
+                            autoplay 
+                            loop 
+                            muted 
+                            playsinline 
+                            src="img/videos/boca/casas/morro omar 5s.mp4" 
+                            alt="La Noria">
+                        </video>
                         <div class="card-body">
                             <h5 class="card-title">La Noria</h5>
                             <h6>Granjas la Noria, Ver</h6>
