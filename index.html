@@ -114,12 +114,10 @@
           transform: translateY(-5px);
           box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
       }
-        .card-img-top {
-            width: 100%; 
-            display: block; 
-            height: 200px;
-            object-fit: cover;
-        }
+      .card-img-top {
+          height: 200px;
+          object-fit: cover;
+      }
       .card-body h5 {
           color: var(--color-primary);
           font-weight: bold;
@@ -144,7 +142,6 @@
           padding-bottom: 15px; /* Espacio para el scrollbar */
           gap: 1rem; /* Espacio entre tarjetas */
           display: flex; /* Asegura el scroll horizontal */
-          align-items: flex-start;
       }
       #propiedades-mobile .col {
           flex: 0 0 80%; /* Ocupa el 80% del ancho para mostrar parte del siguiente */
@@ -265,14 +262,14 @@
                     <div class="carousel-item active">
                         <div class="row row-cols-1 row-cols-md-3 g-4">
                             <div class="col">
-
+                                <div class="card h-100">
                                     <video class="card-img-top" 
                                         autoplay 
                                         loop 
                                         muted 
                                         playsinline 
                                         src="img/videos/boca/casas/morro omar 5s.mp4" 
-                                        alt="morro omar">
+                                        alt="Terra">
                                     </video>
                                     <div class="card-body">
                                         <h5 class="card-title">El Morro</h5>
@@ -287,17 +284,17 @@
                                         <h5 class="fw-bold text-success mt-3">$2,550,000</h5>
                                         <a href="https://www.youtube.com/watch?v=mIgRKkRwj7o" target="_blank" class="btn btn-primary w-100">Ver Video <i class="fab fa-youtube ms-2"></i></a>
                                     </div>
-
+                                </div>
                             </div>
                             <div class="col">
-                               
+                                <div class="card h-100">
                                     <video class="card-img-top" 
                                         autoplay 
                                         loop 
                                         muted 
                                         playsinline 
                                         src="img/videos/veracruz/deptos/genova 5s.mp4" 
-                                        alt="Genova">
+                                        alt="Terra">
                                     </video>
                                     <div class="card-body">
                                         <h5 class="card-title">Genova Col. I Zaragoza preventa</h5>
@@ -312,17 +309,17 @@
                                         <h5 class="fw-bold text-success mt-3">$2,150,000</h5>
                                         <a href="x" target="_blank" class="btn btn-primary w-100">Ver Video <i class="fab fa-youtube ms-2"></i></a>
                                     </div>
-                                
+                                </div>
                             </div>
                             <div class="col">
-                                
+                                <div class="card h-100">
                                     <video class="card-img-top" 
                                         autoplay 
                                         loop 
                                         muted 
                                         playsinline 
                                         src="img/videos/veracruz/deptos/genesis 5s.mp4" 
-                                        alt="genesis">
+                                        alt="Terra">
                                     </video>
                                     <div class="card-body">
                                         <h5 class="card-title">Genesis Zona Centro preventa</h5>
@@ -337,7 +334,7 @@
                                         <h5 class="fw-bold text-success mt-3">$1,980,000</h5>
                                         <a href="x" target="_blank" class="btn btn-primary w-100">Ver Video <i class="fab fa-youtube ms-2"></i></a>
                                     </div>
-                                
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -345,7 +342,7 @@
                     <div class="carousel-item">
                         <div class="row row-cols-1 row-cols-md-3 g-4">
                             <div class="col">
-                                
+                                <div class="card h-100">
                                     <img src="img/riviera/deptos/ame_PlayaMarina_0.jpg" class="card-img-top" alt="Playa Marina">
                                     <div class="card-body">
                                         <h5 class="card-title">Torre Playa Marina</h5>
@@ -359,10 +356,10 @@
                                         <h5 class="fw-bold text-success mt-3">$7,500,000</h5>
                                         <a href="https://www.youtube.com/watch?v=SmNK0ERG2pQ" target="_blank" class="btn btn-primary w-100">Ver Video <i class="fab fa-youtube ms-2"></i></a>
                                     </div>
-                                
+                                </div>
                             </div>
                             <div class="col">
-                                
+                                <div class="card h-100">
                                     <img src="img/riviera/casas/paseoLomas.jpg" class="card-img-top" alt="Playas del Conchal">
                                     <div class="card-body">
                                         <h5 class="card-title">Playas del Conchal</h5>
@@ -376,10 +373,10 @@
                                         <h5 class="fw-bold text-success mt-3">$5,150,000</h5>
                                         <a href="https://www.youtube.com/shorts/aFtto0wgANw" target="_blank" class="btn btn-primary w-100">Ver Video <i class="fab fa-youtube ms-2"></i></a>
                                     </div>
-                              
+                                </div>
                             </div>
                             <div class="col">
-                                
+                                <div class="card h-100">
                                     <img src="img/veracruz/casas/LaNoria_1.jpg" class="card-img-top" alt="La Noria">
                                     <div class="card-body">
                                         <h5 class="card-title">La Noria</h5>
@@ -393,7 +390,7 @@
                                         <h5 class="fw-bold text-success mt-3">$3,500,000</h5>
                                         <a href="https://www.youtube.com/watch?v=fQ-HXHNUqFw" target="_blank" class="btn btn-primary w-100">Ver Video <i class="fab fa-youtube ms-2"></i></a>
                                     </div>
-                                
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -415,15 +412,8 @@
             <h2 class="mb-5 fw-bold text-center" style="color: var(--color-primary);">Oportunidades Destacadas</h2>
             <div class="mobile-scroll">
                 <div class="col">
-                    
-                        <video class="card-img-top" 
-                            autoplay 
-                            loop 
-                            muted 
-                            playsinline 
-                            src="img/videos/boca/casas/morro omar 5s.mp4" 
-                            alt="morro omar">
-                        </video>
+                    <div class="card h-100">
+                        <img src="img/boca/casas/Morro_esquina_0.0.jpg" class="card-img-top" alt="El Morro omar">
                         <div class="card-body">
                             <h5 class="card-title">El Morro</h5>
                             <h6>Boca del Río, Ver.</h6>
@@ -436,45 +426,30 @@
                             <h5 class="fw-bold text-success mt-3">$2,550,000</h5>
                             <a href="https://www.youtube.com/watch?v=mIgRKkRwj7o" target="_blank" class="btn btn-primary w-100">Ver Video <i class="fab fa-youtube ms-2"></i></a>
                         </div>
-                   
+                    </div>
                 </div>
                 <div class="col">
-                    
-                        <video class="card-img-top" 
-                            autoplay 
-                            loop 
-                            muted 
-                            playsinline 
-                            src="img/videos/veracruz/deptos/genova 5s.mp4" 
-                            alt="Genova">
-                        </video>
+                    <div class="card h-100">
+                        <img src="img/boca/casas/arqPichardo_1.jpg" class="card-img-top" alt="El Morro Pichardo">
                         <div class="card-body">
-                            <h5 class="card-title">Genova preventa</h5>
-                            <h6>Veracruz, Ver.</h6>
+                            <h5 class="card-title">El Morro</h5>
+                            <h6>Boca del Río, Ver.</h6>
                             <h6 class="text-muted small">
-                                2 <i class="fas fa-bed"></i> | 2 <i class="fas fa-bath"></i> | 1 <i class="fas fa-car"></i>
+                                3 <i class="fas fa-bed"></i> | 3.5 <i class="fas fa-bath"></i> | 2 <i class="fas fa-car"></i>
                             </h6>
                             <h6 class="text-muted small">
-                                <i class="fa fa-arrows-alt me-1"></i> 65 m2 + 1 estacionamiento
+                                <i class="fa fa-arrows-alt me-1"></i> 140 m² T / 185 m² C
                             </h6>
-                            <h5 class="fw-bold text-success mt-3">$2,150,000</h5>
-                            <a href="x" target="_blank" class="btn btn-primary w-100">Ver Video <i class="fab fa-youtube ms-2"></i></a>
+                            <h5 class="fw-bold text-success mt-3">$3,150,000</h5>
+                            <a href="https://www.youtube.com/watch?v=-TKAe52Bzv4" target="_blank" class="btn btn-primary w-100">Ver Video <i class="fab fa-youtube ms-2"></i></a>
                         </div>
-                    
+                    </div>
                 </div>
                 <div class="col">
-                    
-                        <div class="card h-100">
-                            <video class="card-img-top" 
-                                autoplay 
-                                loop 
-                                muted 
-                                playsinline 
-                                src="img/videos/veracruz/deptos/genesis 5s.mp4" 
-                                alt="genesis">
-                            </video>
+                    <div class="card h-100">
+                        <img src="img/veracruz/deptos/genesis_1.png" class="card-img-top" alt="Genesis">
                         <div class="card-body">
-                            <h5 class="card-title">Genesis Zona Centro preventa</h5>
+                            <h5 class="card-title">Alacio Peréz Centro preventa</h5>
                             <h6>Veracruz Puerto</h6>
                             <h6 class="text-muted small">
                                 2 <i class="fas fa-bed"></i> | 2 <i class="fas fa-bath"></i> | 1 <i class="fas fa-car"></i>
@@ -482,13 +457,13 @@
                             <h6 class="text-muted small">
                                 <i class="fa fa-arrows-alt me-1"></i> 70 m2
                             </h6>
-                            <h5 class="fw-bold text-success mt-3">$1,980,000</h5>
+                            <h5 class="fw-bold text-success mt-3">$1,890,000</h5>
                             <a href="x" target="_blank" class="btn btn-primary w-100">Ver Video <i class="fab fa-youtube ms-2"></i></a>
                         </div>
-                   
+                    </div>
                 </div>
                 <div class="col">
-                    
+                    <div class="card h-100">
                         <img src="img/riviera/deptos/ame_PlayaMarina_0.jpg" class="card-img-top" alt="Playa Marina">
                         <div class="card-body">
                             <h5 class="card-title">Torre Playa Marina</h5>
@@ -502,10 +477,10 @@
                             <h5 class="fw-bold text-success mt-3">$7,500,000</h5>
                             <a href="https://www.youtube.com/watch?v=SmNK0ERG2pQ" target="_blank" class="btn btn-primary w-100">Ver Video <i class="fab fa-youtube ms-2"></i></a>
                         </div>
-                    
+                    </div>
                 </div>
                 <div class="col">
-                    
+                    <div class="card h-100">
                         <img src="img/riviera/casas/paseoLomas.jpg" class="card-img-top" alt="Playas del Conchal">
                         <div class="card-body">
                             <h5 class="card-title">Playas del Conchal</h5>
@@ -519,10 +494,10 @@
                             <h5 class="fw-bold text-success mt-3">$5,150,000</h5>
                             <a href="https://www.youtube.com/shorts/aFtto0wgANw" target="_blank" class="btn btn-primary w-100">Ver Video <i class="fab fa-youtube ms-2"></i></a>
                         </div>
-                    
+                    </div>
                 </div>
                 <div class="col">
-                    
+                    <div class="card h-100">
                         <img src="img/veracruz/casas/LaNoria_1.jpg" class="card-img-top" alt="La Noria">
                         <div class="card-body">
                             <h5 class="card-title">La Noria</h5>
@@ -536,7 +511,7 @@
                             <h5 class="fw-bold text-success mt-3">$3,500,000</h5>
                             <a href="https://www.youtube.com/watch?v=fQ-HXHNUqFw" target="_blank" class="btn btn-primary w-100">Ver Video <i class="fab fa-youtube ms-2"></i></a>
                         </div>
-                   
+                    </div>
                 </div>
             </div>
         </div>
